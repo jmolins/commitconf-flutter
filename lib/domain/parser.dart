@@ -20,44 +20,53 @@ Schedule parseSchedule(Map<String, dynamic> data) {
 
 Day parseDay(Map<String, dynamic> daydata, Map<String, dynamic> data) {
   final List<dynamic> timeslots = daydata['timeslots'];
+  final List<dynamic> tracks = daydata['tracks'];
 
-  final track1 = <Talk>[];
-  final track2 = <Talk>[];
-  final track3 = <Talk>[];
   final slotInfo = <SlotInfo>[];
+
+  final List<List<Talk>> trackList = List.generate(tracks.length, (_) => <Talk>[]);
 
   for (final slot in timeslots) {
     final List<dynamic> sessions = slot['sessions'];
-    final talk1 = sessions[0]['items'][0];
-    track1.add(parseTalk(talk1, data));
-    if (sessions.length > 1) {
-      final talk = sessions[1]['items'][0];
-      track2.add(parseTalk(talk, data));
-    } else {
-      track2.add(emptyTalk);
+    var position = 0; // Position that defines a talk
+    for(int t = 0; t < tracks.length; t++ ) {
+      if (t < sessions.length && t == position) {
+        final talk = sessions[t]['items'][0];
+        if (talk == null || talk == "") {
+          trackList[t].add(emptyTalk);
+          print("empty for null");
+          continue;
+        }
+        final extendRight = sessions[t]['extendRight'] ?? 1;
+        position = t + extendRight;
+        final extendDown = sessions[t]['extendDown'] ?? 1;
+        print(talk);
+        trackList[t].add(parseTalk(talk, data, extendRight, extendDown));
+      } else {
+        print("empty");
+        trackList[t].add(emptyTalk);
+      }
+
     }
-    if (sessions.length > 2) {
-      final talk = sessions[2]['items'][0];
-      final extend = sessions[2]['extend'] ?? 1;
-      track3.add(parseTalk(talk, data, extend));
-    } else {
-      track3.add(emptyTalk);
-    }
+    print("---------");
     slotInfo.add(SlotInfo(
       start: slot['startTime'],
       end: slot['endTime'],
     ));
   }
 
+  List<Track> finalTracks = [];
+  for (int i = 0; i < tracks.length; i++) {
+    finalTracks.add(Track(talks: trackList[i], name: daydata['tracks'][0]['title']));
+  }
+
   return Day(
     slotInfo: slotInfo,
-    track1: Track(talks: track1, name: daydata['tracks'][0]['title']),
-    track2: Track(talks: track2, name: daydata['tracks'][1]['title']),
-    track3: Track(talks: track3, name: daydata['tracks'][2]['title']),
+    tracks: finalTracks,
   );
 }
 
-Talk parseTalk(id, Map<String, dynamic> data, [int extend = 1]) {
+Talk parseTalk(id, Map<String, dynamic> data, [int extendRight = 1, int extendDown = 1]) {
   final talk = data['sessions'][id];
 
   return Talk(
@@ -65,7 +74,7 @@ Talk parseTalk(id, Map<String, dynamic> data, [int extend = 1]) {
     title: talk['title'],
     description: talk['description'],
     speakers: parseSpeakers(talk['speakers'], data),
-    extend: extend,
+    extendDown: extendDown,
   );
 }
 

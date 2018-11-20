@@ -2,30 +2,40 @@ class Schedule {
   final Day day1;
   final Day day2;
 
-  Schedule({this.day1, this.day2});
+  Schedule({
+    this.day1,
+    this.day2,
+  });
 }
 
 class SlotInfo {
   final String start;
   final String end;
 
-  SlotInfo({this.start, this.end});
+  SlotInfo({
+    this.start,
+    this.end,
+  });
 }
 
 class Day {
-  final Track track1;
-  final Track track2;
-  final Track track3;
+  final List<Track> tracks;
   final List<SlotInfo> slotInfo;
 
-  Day({this.track1, this.track2, this.track3, this.slotInfo});
+  Day({
+    this.tracks,
+    this.slotInfo,
+  });
 }
 
 class Track {
   final List<Talk> talks;
   final String name;
 
-  Track({this.talks, this.name});
+  Track({
+    this.talks,
+    this.name,
+  });
 }
 
 final emptyTalk = Talk(
@@ -39,9 +49,17 @@ class Talk {
   final String title;
   final String description;
   final List<Speaker> speakers;
-  final int extend;
+  final int extendRight;
+  final int extendDown;
 
-  Talk({this.id, this.title, this.description, this.speakers, this.extend = 1});
+  Talk({
+    this.id,
+    this.title,
+    this.description,
+    this.speakers,
+    this.extendRight = 1,
+    this.extendDown = 1,
+  });
 
   @override
   String toString() {
