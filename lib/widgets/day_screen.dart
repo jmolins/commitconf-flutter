@@ -1,12 +1,17 @@
+import 'package:commitconf/domain/domain.dart';
 import 'package:commitconf/widgets/bidirectional_scrollview.dart';
 import 'package:flutter/material.dart';
 
-class Agenda extends StatefulWidget {
+class DayScreen extends StatefulWidget {
+  final Day day;
+
+  DayScreen(this.day) : assert(day != null);
+
   @override
-  _AgendaState createState() => _AgendaState();
+  _DayScreenState createState() => _DayScreenState();
 }
 
-class _AgendaState extends State<Agenda> {
+class _DayScreenState extends State<DayScreen> {
   var _tracks = 15;
   var _slots = 20;
 

@@ -1,3 +1,3 @@
 class Api {
-  void init() {}
+  static void init() async {}
 }
