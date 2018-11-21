@@ -181,7 +181,8 @@ class _TracksGridState extends State<TracksGrid> {
         int maxExtendDown = 0;
         List<int> downWardTracks = [];
         for (var trackIndex = 0; trackIndex < _tracks.length; trackIndex++) {
-          if (_tracks[trackIndex].talks[slotIndex].extendDown > maxExtendDown) {
+          if (_tracks[trackIndex].talks[slotIndex].extendDown >=
+              maxExtendDown) {
             maxExtendDown = _tracks[trackIndex].talks[slotIndex].extendDown;
             if (maxExtendDown > 1) downWardTracks.add(trackIndex);
           }
@@ -198,6 +199,7 @@ class _TracksGridState extends State<TracksGrid> {
             for (var trackIndex = 0;
                 trackIndex < _tracks.length - downWardTracks.length;
                 trackIndex++) {
+              //print("trackIndex: $trackIndex");
               localRowWidgets.add(TalkCard(
                 height: widget.cellHeight,
                 width: widget.cellWidth,
