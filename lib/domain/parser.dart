@@ -24,31 +24,27 @@ Day parseDay(Map<String, dynamic> daydata, Map<String, dynamic> data) {
 
   final slotInfo = <SlotInfo>[];
 
-  final List<List<Talk>> trackList = List.generate(tracks.length, (_) => <Talk>[]);
+  final List<List<Talk>> trackList =
+      List.generate(tracks.length, (_) => <Talk>[]);
 
   for (final slot in timeslots) {
     final List<dynamic> sessions = slot['sessions'];
     var position = 0; // Position that defines a talk
-    for(int t = 0; t < tracks.length; t++ ) {
+    for (int t = 0; t < tracks.length; t++) {
       if (t < sessions.length && t == position) {
         final talk = sessions[t]['items'][0];
         if (talk == null || talk == "") {
           trackList[t].add(emptyTalk);
-          print("empty for null");
           continue;
         }
         final extendRight = sessions[t]['extendRight'] ?? 1;
         position = t + extendRight;
         final extendDown = sessions[t]['extendDown'] ?? 1;
-        print(talk);
         trackList[t].add(parseTalk(talk, data, extendRight, extendDown));
       } else {
-        print("empty");
         trackList[t].add(emptyTalk);
       }
-
     }
-    print("---------");
     slotInfo.add(SlotInfo(
       start: slot['startTime'],
       end: slot['endTime'],
@@ -57,7 +53,8 @@ Day parseDay(Map<String, dynamic> daydata, Map<String, dynamic> data) {
 
   List<Track> finalTracks = [];
   for (int i = 0; i < tracks.length; i++) {
-    finalTracks.add(Track(talks: trackList[i], name: daydata['tracks'][0]['title']));
+    finalTracks
+        .add(Track(talks: trackList[i], name: daydata['tracks'][0]['title']));
   }
 
   return Day(
@@ -66,7 +63,8 @@ Day parseDay(Map<String, dynamic> daydata, Map<String, dynamic> data) {
   );
 }
 
-Talk parseTalk(id, Map<String, dynamic> data, [int extendRight = 1, int extendDown = 1]) {
+Talk parseTalk(id, Map<String, dynamic> data,
+    [int extendRight = 1, int extendDown = 1]) {
   final talk = data['sessions'][id];
 
   return Talk(
@@ -74,6 +72,7 @@ Talk parseTalk(id, Map<String, dynamic> data, [int extendRight = 1, int extendDo
     title: talk['title'],
     description: talk['description'],
     speakers: parseSpeakers(talk['speakers'], data),
+    extendRight: extendRight,
     extendDown: extendDown,
   );
 }
