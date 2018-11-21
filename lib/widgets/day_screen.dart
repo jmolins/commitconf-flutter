@@ -36,12 +36,14 @@ class _DayScreenState extends State<DayScreen> {
   }
 
   List<Widget> _buildTracksHeader() {
-    return List.generate(widget.day.tracks.length, (i) {
+    return widget.day.tracks.map((track) {
       return Container(
         width: _cellWidth,
-        color: i.isEven ? Colors.black45 : Colors.white,
+        child: Center(
+          child: Text(track.name),
+        ),
       );
-    });
+    }).toList();
   }
 
   List<Widget> _buildMyTrack() {
@@ -171,6 +173,7 @@ class _TracksGridState extends State<TracksGrid> {
     for (var slotIndex = 0; slotIndex < _slotCount;) {
       if (_tracks[0].talks[slotIndex].extendRight == _trackCount) {
         rows.add(TalkCard(
+          talk: _tracks[0].talks[slotIndex],
           height: widget.cellHeight,
           width: widget.cellWidth * _trackCount,
         ));
@@ -201,6 +204,7 @@ class _TracksGridState extends State<TracksGrid> {
                 trackIndex++) {
               //print("trackIndex: $trackIndex");
               localRowWidgets.add(TalkCard(
+                talk: _tracks[trackIndex].talks[localSlotIndex],
                 height: widget.cellHeight,
                 width: widget.cellWidth,
               ));
@@ -211,6 +215,7 @@ class _TracksGridState extends State<TracksGrid> {
 
           // Now the last downward columns
           downWardTracks.forEach((trackIndex) => tempRow.add(TalkCard(
+                talk: _tracks[trackIndex].talks[slotIndex],
                 height: widget.cellHeight * maxExtendDown,
                 width: widget.cellWidth,
               )));
@@ -224,6 +229,7 @@ class _TracksGridState extends State<TracksGrid> {
           List<Widget> widgets = [];
           for (var trackIndex = 0; trackIndex < _tracks.length; trackIndex++) {
             widgets.add(TalkCard(
+              talk: _tracks[trackIndex].talks[slotIndex],
               height: widget.cellHeight,
               width: widget.cellWidth,
             ));
@@ -247,10 +253,11 @@ class _TracksGridState extends State<TracksGrid> {
 }
 
 class TalkCard extends StatelessWidget {
+  final Talk talk;
   final double height;
   final double width;
 
-  TalkCard({this.height, this.width});
+  TalkCard({this.talk, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -262,6 +269,9 @@ class TalkCard extends StatelessWidget {
         padding: EdgeInsets.all(4.0),
         child: Card(
           color: Colors.white,
+          child: Center(
+            child: Text(talk.title, overflow: TextOverflow.ellipsis),
+          ),
         ),
       ),
     );

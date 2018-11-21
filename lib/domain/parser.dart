@@ -54,7 +54,7 @@ Day parseDay(Map<String, dynamic> daydata, Map<String, dynamic> data) {
   List<Track> finalTracks = [];
   for (int i = 0; i < tracks.length; i++) {
     finalTracks
-        .add(Track(talks: trackList[i], name: daydata['tracks'][0]['title']));
+        .add(Track(talks: trackList[i], name: daydata['tracks'][i]['title']));
   }
 
   return Day(
