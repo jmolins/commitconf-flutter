@@ -28,6 +28,7 @@ class ScheduleScreenState extends State<ScheduleScreen> {
   @override
   void initState() {
     super.initState();
+    print("init");
     _subscription = widget.bloc.schedule.listen((schedule) {
       setState(() {
         _schedule = schedule;

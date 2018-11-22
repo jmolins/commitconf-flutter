@@ -10,15 +10,20 @@ class DayScreen extends StatefulWidget {
 
   final int dayIndex;
 
-  DayScreen({key, this.day, this.dayIndex}) : assert(day != null), super(key: key);
+  DayScreen({key, this.day, this.dayIndex})
+      : assert(day != null),
+        super(key: key);
 
   @override
   _DayScreenState createState() => _DayScreenState();
 }
 
-class _DayScreenState extends State<DayScreen> {
+class _DayScreenState extends State<DayScreen>
+    with SingleTickerProviderStateMixin<DayScreen> {
   var _headerHeight = 40.0;
-  var _myTrackWidth = 120.0;
+  var _myTrackWidth = 160.0;
+  var _timesWidth = 60.0;
+
   var _cellWidth = 100.0;
   var _cellHeight = 120.0;
 
@@ -31,6 +36,10 @@ class _DayScreenState extends State<DayScreen> {
 
   ValueChanged<Offset> scrollListener;
 
+  AnimationController animationController;
+  Animation _myTrackWidthAnimation;
+  Animation _timesWidthAnimation;
+
   @override
   initState() {
     super.initState();
@@ -38,14 +47,34 @@ class _DayScreenState extends State<DayScreen> {
       _headerScrollController.jumpTo(offset.dx);
       _myTrackScrollController.jumpTo(offset.dy);
     };
+    animationController =
+        AnimationController(duration: Duration(milliseconds: 200), vsync: this);
+    _myTrackWidthAnimation =
+        Tween(begin: 0.0, end: _myTrackWidth).animate(animationController)
+          ..addListener(() {
+            setState(() {});
+          });
+    _timesWidthAnimation =
+        Tween(begin: _timesWidth, end: 0.0).animate(animationController)
+          ..addListener(() {
+            setState(() {});
+          });
   }
 
   List<Widget> _buildTracksHeader() {
     return widget.day.tracks.map((track) {
       return Container(
         width: _cellWidth,
-        child: Center(
-          child: Text(track.name),
+        child: Padding(
+          padding: const EdgeInsets.all(3.0),
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey),
+            ),
+            child: Center(
+              child: Text(track.name),
+            ),
+          ),
         ),
       );
     }).toList();
@@ -57,13 +86,39 @@ class _DayScreenState extends State<DayScreen> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         SizedBox(
-          width: _myTrackWidth,
+          width: _myTrackWidthAnimation.value + _timesWidthAnimation.value,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Container(
-                height: _headerHeight,
-                color: Colors.black,
+              Row(
+                children: <Widget>[
+                  Opacity(
+                    opacity: animationController.view.value,
+                    child: Container(
+                      height: _headerHeight,
+                      width: _myTrackWidthAnimation.value,
+                      color: Color(0xFFEEEEEE),
+                      child: Center(
+                        child: GestureDetector(
+                          onTap: () => animationController.reverse(),
+                          child: Text(
+                            "My Track",
+                            style: Theme.of(context).textTheme.title,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: _headerHeight,
+                    color: Color(0xFFEEEEEE),
+                    width: _timesWidthAnimation.value,
+                    child: IconButton(
+                      icon: Icon(Icons.calendar_today),
+                      onPressed: () => animationController.forward(),
+                    ),
+                  ),
+                ],
               ),
               Expanded(
                 child: NotificationListener(
@@ -77,7 +132,9 @@ class _DayScreenState extends State<DayScreen> {
                   child: MyScheduleView(
                     day: widget.dayIndex,
                     height: _cellHeight,
-                    width: _myTrackWidth,
+                    myTrackWidth: _myTrackWidthAnimation.value,
+                    timesWidth: _timesWidthAnimation.value,
+                    opacity: animationController.view.value,
                     scrollController: _myTrackScrollController,
                     bloc: ConferenceBlocProvider.of(context),
                   ),
@@ -134,7 +191,8 @@ class TracksGrid extends StatefulWidget {
   final double cellWidth;
   final double cellHeight;
 
-  TracksGrid({key, this.day, this.cellWidth, this.cellHeight}) : super(key: key);
+  TracksGrid({key, this.day, this.cellWidth, this.cellHeight})
+      : super(key: key);
 
   @override
   _TracksGridState createState() => _TracksGridState();
@@ -272,19 +330,21 @@ class TalkCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey,
+      //color: Colors.grey,
       height: height,
       width: width,
       child: Padding(
-        padding: EdgeInsets.all(4.0),
+        padding: EdgeInsets.all(3.0),
         child: GestureDetector(
           onTap: () {
             bloc.registerAttendance(talk, 0, slotInfo);
             /*Scaffold.of(context).showSnackBar(
                 SnackBar(content: Text("${talk.title}, ${slotInfo.start}")));*/
           },
-          child: Card(
-            color: Colors.white,
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey),
+            ),
             child: Center(
               child: Text(talk.title, overflow: TextOverflow.ellipsis),
             ),

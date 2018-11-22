@@ -5,12 +5,20 @@ import 'package:flutter/material.dart';
 class MyScheduleView extends StatefulWidget {
   final int day;
   final double height;
-  final double width;
+  final double myTrackWidth;
+  final double timesWidth;
+  final double opacity;
   final ScrollController scrollController;
   final ConferenceBloc bloc;
 
   MyScheduleView(
-      {this.day, this.height, this.width, this.scrollController, this.bloc});
+      {this.day,
+      this.height,
+      this.myTrackWidth,
+      this.timesWidth,
+      this.opacity,
+      this.scrollController,
+      this.bloc});
 
   @override
   _MyScheduleViewState createState() => _MyScheduleViewState();
@@ -27,45 +35,69 @@ class _MyScheduleViewState extends State<MyScheduleView> {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder(
-        stream: _stream,
-        builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.active &&
-              snapshot.data != null) {
-            int accumulatedExtend = 0;
-            List<Attendance> daySchedule = snapshot.data[widget.day];
+    return Container(
+      color: Color(0xFFEEEEEE),
+      child: StreamBuilder(
+          stream: _stream,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.active &&
+                snapshot.data != null) {
+              int accumulatedExtend = 0;
+              List<Attendance> daySchedule = snapshot.data[widget.day];
 
-            return ListView.builder(
-              scrollDirection: Axis.vertical,
-              controller: widget.scrollController,
-              itemBuilder: (context, index) {
-                double height = 0.0;
-                if (accumulatedExtend == 0) {
-                  accumulatedExtend = daySchedule[index].talk.extendDown;
-                  height = widget.height * accumulatedExtend;
-                }
-                accumulatedExtend--;
+              return ListView.builder(
+                scrollDirection: Axis.vertical,
+                controller: widget.scrollController,
+                itemBuilder: (context, index) {
+                  double height = 0.0;
+                  if (accumulatedExtend == 0) {
+                    accumulatedExtend = daySchedule[index].talk.extendDown;
+                    height = widget.height * accumulatedExtend;
+                  }
+                  accumulatedExtend--;
 
-                return height != 0.0
-                    ? Container(
-                        height: height,
-                        width: widget.width,
-                        child: Column(
-                          children: <Widget>[
-                            Text(daySchedule[index].slotInfo.start),
-                            daySchedule[index].talk != null
-                                ? Text(daySchedule[index].talk.title)
-                                : Container(),
-                          ],
+                  return Row(children: [
+                    Opacity(
+                      opacity: widget.opacity,
+                      child: height != 0.0
+                          ? Container(
+                              height: height,
+                              width: widget.myTrackWidth,
+                              child: Column(
+                                children: <Widget>[
+                                  Text(daySchedule[index].slotInfo.start),
+                                  daySchedule[index].talk != null
+                                      ? Text(daySchedule[index].talk.title)
+                                      : Container(),
+                                ],
+                              ),
+                            )
+                          : SizedBox(),
+                    ),
+                    Opacity(
+                      opacity: 1 - widget.opacity,
+                      child: Container(
+                        height: widget.height,
+                        width: widget.timesWidth,
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey),
+                            ),
+                            child: Text(daySchedule[index].slotInfo.start),
+                          ),
                         ),
-                      )
-                    : SizedBox();
-              },
-              itemCount: daySchedule.length,
-            );
-          } else {
-            return Center(child: CircularProgressIndicator());
-          }
-        });
+                      ),
+                    ),
+                  ]);
+                },
+                itemCount: daySchedule.length,
+              );
+            } else {
+              return Center(child: CircularProgressIndicator());
+            }
+          }),
+    );
   }
 }
