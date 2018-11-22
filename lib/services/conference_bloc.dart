@@ -97,14 +97,14 @@ class ConferenceBloc {
   }
 
   void registerAttendance(Talk talk, int day, SlotInfo slotInfo) {
-    if (_mySchedule == null) {
-      print("isNull");
-    }
     List<Attendance> daySchedule = _mySchedule[day];
     bool registered = false;
     int extension = 1;
     int extendedIndex = -1;
     for (int i = 0; i < daySchedule.length; i++) {
+      // If we have a talk that extends more than one slot, we need to unregister this talk
+      // when other talks are registered in the following slots
+      // In this case we assign an empty talk to the first slot that was occupied by the longer talk
       if (daySchedule[i].talk.extendDown > 1) {
         extension = daySchedule[i].talk.extendDown;
         extendedIndex = i;
@@ -118,11 +118,8 @@ class ConferenceBloc {
         }
         registered = true;
         if (extendedIndex > -1 && i < extendedIndex + extension) {
-          print(
-              "${i + 1 - extension} TALK: ${daySchedule[i + 1 - extension].talk.title}");
-          daySchedule[i + 1 - extension].copyWith(talk: emptyTalk);
-          print(
-              "${i + 1 - extension} TALK: ${daySchedule[i + 1 - extension].talk.title}");
+          daySchedule[i + 1 - extension] =
+              daySchedule[i + 1 - extension].copyWith(talk: emptyTalk);
         }
         break;
       }
