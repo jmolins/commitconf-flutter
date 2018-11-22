@@ -7,15 +7,18 @@ Map<String, dynamic> decode(String string) {
 }
 
 Schedule parseSchedule(Map<String, dynamic> data) {
+  Map<String, Talk> talks = {};
+
   return Schedule(
+    talks: talks,
     days: [
-      parseDay('2018-11-23', data),
-      parseDay('2018-11-24', data),
+      parseDay('2018-11-23', data, talks),
+      parseDay('2018-11-24', data, talks),
     ],
   );
 }
 
-Day parseDay(String dayId, Map<String, dynamic> data) {
+Day parseDay(String dayId, Map<String, dynamic> data, Map<String, Talk> talks) {
   final daydata = data['schedule'][dayId];
 
   final List<dynamic> timeslots = daydata['timeslots'];
@@ -32,15 +35,17 @@ Day parseDay(String dayId, Map<String, dynamic> data) {
     var position = 0; // Position that defines a talk
     for (int t = 0; t < tracks.length; t++) {
       if (t < sessions.length && t == position) {
-        final talk = sessions[t]['items'][0];
-        if (talk == null || talk == "") {
+        final talkData = sessions[t]['items'][0];
+        if (talkData == null || talkData == "") {
           trackList[t].add(emptyTalk);
           continue;
         }
         final extendRight = sessions[t]['extendRight'] ?? 1;
         position = t + extendRight;
         final extendDown = sessions[t]['extendDown'] ?? 1;
-        trackList[t].add(parseTalk(talk, data, extendRight, extendDown));
+        Talk talk = parseTalk(talkData, data, extendRight, extendDown);
+        trackList[t].add(talk);
+        talks[talk.id] = talk;
       } else {
         trackList[t].add(emptyTalk);
       }

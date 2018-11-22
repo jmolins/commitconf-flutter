@@ -1,0 +1,511 @@
+{
+  "schedule": {
+    "2018-11-23": {
+      "dateReadable": "November 23",
+      "tracks": [
+        {
+          "title": "Track 1"
+        },
+        {
+          "title": "Track 2"
+        },
+        {
+          "title": "Track 3"
+        },
+        {
+          "title": "Track 4"
+        },
+        {
+          "title": "Track 5"
+        },
+        {
+          "title": "Track 6"
+        },
+        {
+          "title": "Track 7"
+        },
+        {
+          "title": "Track 8"
+        },
+        {
+          "title": "Track 9"
+        },
+        {
+          "title": "Track A"
+        },
+        {
+          "title": "Track B"
+        },
+        {
+          "title": "Track C"
+        }
+      ],
+      "timeslots": [
+        {
+          "startTime": "08:00",
+          "endTime": "09:00",
+          "sessions": [
+            {
+              "items": [
+                "registration"
+              ],
+              "extendRight": 12
+            }
+          ]
+        },
+        {
+          "startTime": "09:00",
+          "endTime": "09:30",
+          "sessions": [
+            {
+              "items": [
+                "commit10"
+              ],
+              "extendRight": 12
+            }
+          ]
+        },
+        {
+          "startTime": "09:30",
+          "endTime": "09:45",
+          "sessions": [
+            {
+              "items": [
+                "ibmwatson"
+              ],
+              "extendRight": 12
+            }
+          ]
+        },
+        {
+          "startTime": "10:00",
+          "endTime": "10:45",
+          "sessions": [
+            {
+              "items": [
+                "forodatakarma"
+              ]
+            },
+            {
+              "items": [
+                "nodejsowasp"
+              ]
+            },
+            {
+              "items": [
+                "houdinipetar"
+              ]
+            },
+            {
+              "items": [
+                "visionarquitecturas"
+              ]
+            },
+            {
+              "items": [
+                "migrarelcaro"
+              ]
+            },
+            {
+              "items": [
+                "60framesanimations"
+              ]
+            },
+            {
+              "items": [
+                "fragmentacionvirus"
+              ]
+            },
+            {
+              "items": [
+                "geobigdata"
+              ]
+            },
+            {
+              "items": [
+                "chicocomoyo"
+              ]
+            },
+            {
+              "items": [
+                "postgresqldelicatessen"
+              ],
+              "extendDown": 2
+            },
+            {
+              "items": [
+                "codeterraform"
+              ],
+              "extendDown": 2
+            },
+            {
+              "items": [
+                "testingtipstricks"
+              ],
+              "extendDown": 2
+            }
+          ]
+        },
+        {
+          "startTime": "11:00",
+          "endTime": "11:40",
+          "sessions": [
+            {
+              "items": [
+                "transaccionesmicro"
+              ]
+            },
+            {
+              "items": [
+                "uxguerrilla"
+              ]
+            },
+            {
+              "items": [
+                "thedailywar"
+              ]
+            },
+            {
+              "items": [
+                "estrategiasbranching"
+              ]
+            },
+            {
+              "items": [
+                "extiendeasistente"
+              ]
+            },
+            {
+              "items": [
+                "introducciond3"
+              ]
+            },
+            {
+              "items": [
+                "desarrollachatbot"
+              ]
+            },
+            {
+              "items": [
+                "statisticaltools"
+              ]
+            },
+            {
+              "items": [
+                "servicemesh"
+              ]
+            }
+          ]
+        },
+        {
+          "startTime": "11:45",
+          "endTime": "12:30",
+          "sessions": [
+            {
+              "items": [
+                "coffeebreak"
+              ],
+              "extendRight": 12
+            }
+          ]
+        }
+      ]
+    },
+    "2018-11-24": {
+      "dateReadable": "November 24",
+      "tracks": [
+        {
+          "title": "Track One"
+        },
+        {
+          "title": "Track Two"
+        },
+        {
+          "title": "Track A"
+        }
+      ],
+      "timeslots": [
+        {
+          "startTime": "08:00",
+          "endTime": "09:00",
+          "sessions": [
+            {
+              "items": [
+                "registration"
+              ],
+              "extentRight": 3
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sessions": {
+    "registration": {
+      "title": "REGISTRATION",
+      "description": ""
+    },
+    "commit10": {
+      "title": "Commit 1.0",
+      "description": ""
+    },
+    "ibmwatson": {
+      "title": "IBM: IA más allá de Watson",
+      "description": "Si en IBM nos destacamos en algo eso es en formar parte activa de la innovación, con más de 3000 investigadores, repartidos en 12 laboratorios de los 6 contienentes. En este charla os eseñaremos un trocito del futuro en el que estamos investigando, un futuro muy ligado a la Inteligencia Artificial. Os enseñaremos un futuro que podreis ver, tocar y que se encuentran más cerca de la ciencia ficción que de la realidad."
+    },
+    "forodatakarma": {
+      "title": "Foro data karma: cuando los datos y el IA se encuentran",
+      "description": "El 17 de marzo de 2018 The New York Times, The Guardian y The Observer denunciaron que la empresa Cambridge Analytica estaba explotando información de 50 millones de usuarios de Facebook. La noticia más controvertida al respecto fue la utilización de esa información para la campaña de Trump: cómo se utilizaron los datos para persuadir a los indecisos y de esta forma favorecer en voto.\n\nActualmente, generamos altos volúmenes de datos. Desde hace décadas las empresas los están utilizando para mejorar sus procesos de negocio. Se han descubierto varias vías: mejorar la vida de los usuarios / clientes, personalizar la información o segmentar tipos de clientes interesantes para otras empresas.\n\nDurante ese proceso de recolección de datos, procesamiento y análisis nos entran muchas dudas e incertidumbre. *¿Cómo se obtienen los datos? ¿Cómo de privados son? ¿Qué empresas utilizan mis datos sin saberlo? ¿Cómo son los algoritmos que procesan los datos? ¿Cuándo desaparecerán los puestos de trabajo? *\n\nContaremos con las expertas en BD & IA Inés Huertas, Nerea Luis y Bea Zigiella junto a la moderadora Laura Lacarra para debatir sobre nuestras opiniones en este campo. Abriremos el debate a los asistentes y así sacar más conclusiones sobre este tema preocupante.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Big Data;Machine Learning",
+        "None"
+      ]
+    },
+    "transaccionesmicro": {
+      "title": "Transacciones en microservicios... ¿Mito o realidad?",
+      "description": "Una de las problemáticas más comunes que nos encontramos al trabajar con una arquitectura basada en microservicios es el tratamiento de la transaccionalidad.\n\nUn problema generalmente resuelto en el mundo monolítico se convierte en un desafío en las arquitecturas distribuidas. ¿Cómo podemos atacar esta necesidad transaccional de forma eficiente?\n\nEn esta charla estudiaremos técnicas y patrones habituales (CQRS, event sourcing, lectura de logs transaccionales...) que nos ayudarán a gestionarla.\n\nLa charla será teórico práctica con ejemplos sobre las técnicas analizadas.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Advanced",
+        "Cloud",
+        "Java;Go"
+      ]
+    },
+    "nodejsowasp": {
+      "title": "Desarrollo seguro en NodeJS (OWASP top ten y buenas prácticas en JWT)!",
+      "description": "En esta charla veremos las vulnerabilidades de la lista OWASP top ten de 2017 y como evitarlas en NodeJS. Además también veremos buenas prácticas para segurizar nuestras apis utilizando JWT y JWKS.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Security;Web",
+        "Javascript"
+      ]
+    },
+    "postgresqldelicatessen": {
+      "title": "PostgreSQL Delicatessen: Top 10 features you don't know about",
+      "description": "If you want to go beyond using PostgreSQL as a plain repository of data, not just relying on your ORM or any other middleware, but instead taking the best and most modern features of your favourite database, this workshop is for you.\n\nOn this talk we want to present in an interactive and practical way a few interesting not so well known features from the best open source relational database, PostgreSQL.\n\nWe will see how to:\n\nIntegrate PostgreSQL with external big data repositories such as MongoDB (yes MongoDB, sorry for the stroke), BigQuery, Hive or Impala and join the best of two worlds.\nRun Python code inside the database for complex logic such as machine learning algorithms.\nFinally understand window functions to make amazing aggregations.\nVisually explore the execution plan of your queries to optimize performance.\nCreate interactive geospatial visualizations with SQL and WebGL\nCreate and share SQL notebooks\n...and much much more (well it will depend on how much time do we have but you get the idea)\n\nWe will provide lots of material for the workshop and it will be entirely done on the cloud, so you don’t even need to have an instance of PostgreSQL running on your laptop (of course if you want you still can).",
+      "tags": [
+        "Workshop",
+        "English",
+        "Intermediate",
+        "Soft skills;SQL and NOSQL;Big Data;Web",
+        "HTML/CSS;Javascript;Python;Other"
+      ]
+    },
+    "uxguerrilla": {
+      "title": "UX de guerrilla, manual de supervivencia para devs.",
+      "description": "A veces la relación entre los diseñadores y los desarrolladores no es tan fluida como debería. ¿Cómo entendernos cuando hablamos lenguajes tan distintos?\n\nUna buena UX no solo la crean los diseñadores y todo el equipo detrás de un producto ha de estar implicado\n\nEn esta charla hago un repaso a los fundamentos de la experiencia de usuario desde mis casi 20 años de experiencia trabajando con equipos multidisciplinares , traduciéndolo al lenguaje ‘dev’\n\n",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Soft skills;Other",
+        "Other"
+      ]
+    },
+    "houdinipetar": {
+      "title": "Houdini lo va a petar... ¿en serio?",
+      "description": "Hay qué ver lo difícil que les resulta a algun@s el CSS, cuánto dolor supone enfrentarse a él... qué horror el soporte (o el no-soporte) de los navegadores... ¡¡una solución quiero!! Menos mal que el W3C está creando Houdini, para acabar con todo este mal rollo de los estilos. Pero ¿vamos en la dirección correcta?¿realmente Houdini viene a ayudar al mundo de la maquetación? Veremos en esta charla qué es Houdini, qué promete y os daré mi opinión al respecto para que me troleeis.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other;Web",
+        "HTML/CSS;Javascript"
+      ]
+    },
+    "visionarquitecturas": {
+      "title": "Una visión moderna de las arquitecturas",
+      "description": "Hoy en día todos llevamos un ordenador repleto de aplicaciones en el bolsillo o incluso, en la muñeca. Estamos rodeados de dispositivos electrónicos que nos facilitan las rutinas diarias, nos dicen cuánto vamos a tardar en llegar a nuestra cita, nos ponen la música que queremos oír o nos conectan en tiempo real con amigos y familia.\n\nPuede parecer, por tanto, que estamos ante una ingeniería software muy madura y estable. Nada más lejos de la realidad. Los avances en ingeniería del software de los últimos 5 años claramente superan a los últimos 10 y estos a su vez dejan obsoletos los anteriores 25, en un modelo que, de forma similar a la ley de Moore, muestra un crecimiento exponencial. Esta rápida evolución no está exenta de cambios, muchas veces contradictorios e incipientes, fruto de una innovación acelerada por las necesidades constantes de software con el que poder competir en un mundo cada vez mas tecnológico.\n\nEn perspectiva, estamos asistiendo al nacimiento real de la ingeniera del software, con una evolución cada vez mas intensa que se espera continúe así los próximos años, máxime con la llegada de nuevas tecnologías como IA, IoT, Big Data, Real-time, Blockchain, Cloud, etc. Al mismo tiempo, el software se vuelve cada vez mas importante para soportar los modelos de negocio actuales y nuevos que constantemente están surgiendo y que demandan los clientes.\n\nComo usuarios de software, hemos pasado de una posición reactiva, en la que simplemente \"esperábamos\" a que las empresas de software construyesen software y lo pusieran a nuestra disposición, a una posición totalmente proactiva, en el que nosotros demandamos software para cubrir nuestras necesidades y lo demandamos ya. Ahora, somos los que imponemos los tiempos a las empresas y ojo, no solo a las empresas propias de desarrollo de software.\n\nDesde un punto vista arquitectural, observamos evoluciones con un patrón similar al biológico, pasando de estructuras sencillas con arquitectura monolíticas, a sistemas con mas necesidades de integración y comunicación, evolucionando a versiones mas autónomas, especializadas y desacopladas como arquitecturas de microservicios, service mesh, basadas en eventos, etc.\n\nEn esta charla os contaremos nuestra visión de como las arquitecturas han evolucionando desde las épocas doradas de los grandes monolitos hasta la actual donde justamente el reto es romperlos y no caer en errores del pasado, ofreciendo un enfoque mucho mas moderno que permita soluciones mas versátiles. Pero no nos quedaremos solo en los puntos fuertes, sino que también profundizaremos principales dificultades en su aplicación y tendencias futuras, tanto a nivel de arquitectura como organizativo, metodológico, gobierno, cultura, plataforma, etc.\n\nSi te apasionan los microservicios, arquitecturas EDA, service mesh, orientación a productos, CQRS, event sourcing, DDD, PaaS, CaaS, etc., y buscas una charla donde se ponga todo en perspectiva, sin duda, te lo pasaras bien.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other",
+        "None"
+      ]
+    },
+    "migrarelcaro": {
+      "title": "Todos los secretos para migrar de ELCARO a PostgreSQL",
+      "description": "¿Han pasado ya los “hombres de negro” por la empresa para dejar una “receta”? ¿Quieres saber cómo transformar cientos de miles o millones de euros en licencias de la base de datos más cara en 0€?\n\nMigrar de ELCARO a PostgreSQL no es fácil. Pero los potenciales beneficios son ingentes. No te pierdas esta charla si quieres saber:\n\nCuándo se puede y cuándo no se puede (debe) migrar.\nQué hacer con esos PL/SQL.\nCómo se migra DDL, cómo optimizarlo y fallos habituales.\n¿Migración offline, o en tiempo real?\nTuning, rendimiento.\n¿Y la nube, cómo migrar a AWS, GCP…?",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "SQL and NOSQL",
+        "Other"
+      ]
+    },
+    "60framesanimations": {
+      "title": "60 Frames of Animations",
+      "description": "Existen docenas de artículos, vídeos y charlas que cuentan cómo podemos crear animaciones. Hay cientos de recursos que podemos utilizar para este propósito, y miles de ideas que podemos reutilizar para crear aplicaciones \"bonitas\". Sin embargo, la información suele estar sesgada, ya que no se suele explicar por qué los desarrolladores deberían utilizar animaciones y por qué no son meros elementos decorativos.\n\nEmpezando con la perspectiva de un diseñador, y terminando con detalles más técnicos, intentaremos entender las razones por las que una buena animación no solo produce un resultado agradable a la vista, sino que es crucial para generar una buena experiencia de usuario. Recorreremos los distintos puntos en los que los navegadores procesan los estilos de una web, y analizaremos qué optimizaciones son adecuadas en cada punto y cómo podemos llevarlas acabo.\n\nTras entender todo el proceso que se lleva acabo para crear y renderizar una animación, dejaremos una reflexión sobre hasta qué punto es necesario tener las animaciones en cuenta y desde dónde debemos enfocarlas.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Web",
+        "HTML/CSS;Javascript"
+      ]
+    },
+    "fragmentacionvirus": {
+      "title": "Fragmentación, el virus que puede acabar con tu alta disponibilidad (con ejemplos para kubernetes)",
+      "description": "En BBVA construimos sistemas altamente distribuidos en alta disponibilidad donde diferentes arquitecturas orientadas a servicios y microservicios realizan varias despliegues al día, escalando según sea necesario.\n\nSin embargo, cada vez que se realiza un despliegue, escalado o borrado de una aplicación, nuestro cluster tiende a fragmentar recursos o desbalancearse, haciendo un pobre uso de CPU o memoria ante situaciones de stress. En situaciones extremas esto puede llegar a poner en peligro la alta disponibilidad de nuestros sistemas.\n\nEn esta charla trataremos la fragmentación en clusters de kubernetes para entenderla, medirla y mantenerla dentro de niveles óptimos. Veremos cómo hacemos en el equipo de PaaS de BBVA para desplegar sistemas altamente distribuidos y donde conviven aplicaciones altamente heterogéneas y con diferentes necesidades de recursos y quotas.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Devops;Cloud",
+        "None"
+      ]
+    },
+    "geobigdata": {
+      "title": "Geoposicionamiento Big Data o It's bigger on the inside",
+      "description": "El Big Data ha encontrado respuesta, con una precisión sin precedentes, a la mayor parte de las seis W de la investigación científica. Sabemos mejor que nunca Qué (What) ha ocurrido al procesar millones de eventos, Quién o Quiénes (Who) ha hecho el Qué al permitirnos juntar datos dispares, y podemos saber el Por qué (Why): y el Cómo (How) gracias al reconocimiento de patrones aportado por el Machine Learning. Pero ¿qué pasa con el Donde (Where) y el Cuándo (When)? ¿Cómo nos ayudan las tecnologías Big Data a solucionar estas dos preguntas vitales?\n\nCuando Jorge López-Malla fue a responderse estas preguntas se encontró, que tal y como le ocurre a la máquina del tiempo más británica de la historia (la TARDIS), el problema es mucho más grande por dentro que por fuera. Al entrar en detalle se vió que las tecnologías Big Data de procesamiento y, sobre todo, de almacenamiento, no estaban pensadas para soportar esta casuística y necesitaban una nueva vuelta de tuerca\"\n\nDebido a esto tuvo que echar mano de tecnologías Open Source no tan conocidas, como Magellan o Geomesa usados encima de arquitecturas típicas de Big Data (Spark, HDFS y HBase), añadiendo capacidades que no son soportadas nativamente con las que ser capaces de dar una solución a nuestro problema. Para finalizar se hará una demo en directo mostrando las tecnologías que usamos en Geoblink para ver una aplicación práctica del problema.\n\n ",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Big data",
+        "Scala"
+      ]
+    },
+    "chicocomoyo": {
+      "title": "Que hace un chico como yo en un sitio como este",
+      "description": "Acabo de embarcarme en la aventura de ser el Dev Audience PMM en España para Microsoft. Eso significa que soy la persona encargada de conectar con las comunidades de desarrollo, lo que puede resultar muy sorprendente. ¿ Qué hace una persona como yo, pionero en el mundo OpenStack y colaborador de muchas comunidades trabajando para Microsoft?\n\nA lo largo de mi charla iré argumentando el por que de este cambio que se fundamenta en que, a dia de hoy, y bajo mi punto de vista, Microsoft esta ofreciendo el mejor ecosistema para el desarrollo de software, a la par que se esta convirtiendo en el mayor contribuidor y constructor de software libre del mundo.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other",
+        "None"
+      ]
+    },
+    "codeterraform": {
+      "title": "Infrastructure as Code with Terraform",
+      "description": "Have you ever heard about the 'Infrastructure as Code' concept but you never seen it applied? Are you asking yourself if it deserves your time or if it is worth for your business? During this workshop we will look over some IaC concepts and we will learn how to automate the creation of your cloud infrastructure using one of the best tools in the market: Terraform.\n\nTo follow the workshop properly the following will be needed:\n\nA laptop\nAn Azure account: https://azure.microsoft.com/free/\nAn AWS account: https://aws.amazon.com/free/\nA code editor installed (I'll be using VSCode)\nA git client installed\nTerraform installed: https://www.terraform.io/intro/getting-started/install.html",
+      "tags": [
+        "Workshop",
+        "Spanish",
+        "Beginner",
+        "Agile and Lean;Devops",
+        "Other"
+      ]
+    },
+    "testingtipstricks": {
+      "title": "Testing: Tips & Tricks",
+      "description": "Me gustaría facilitar una sesión del open space donde los asistentes compartamos trucos y consejos a la hora de hacer testing que nos haga la vida más fácil. Yo mismo tengo una pequeña lista de cosas que me gusta aplicar en los tests para hacerlos más legibles, fáciles de entender o modificar, menos dolorosos de mantener, etc. Me gustaría cubrir diferentes casos y sacar un listado de trucos y consejos de la gente a la hora de escribir tests sin importar el lenguaje.",
+      "tags": [
+        "Unconference",
+        "Spanish",
+        "Intermediate",
+        "Other",
+        "None"
+      ]
+    },
+    "thedailywar": {
+      "title": "Los Developers - The Daily War",
+      "description": "En el mundo del desarrollo de interfaces digitales, entre los pilares principales, hay dos que deben interactuar muy de cerca para construir un producto robusto y de calidad: experiencia de usuario (UX) y desarrollo frontend. Dos mundos diferentes, con maneras de pensar específicas, que deben aprender a coexistir para asegurar el éxito del producto resultante.\n\nEn esta charla, se abordará la importancia de la inclusión de ambos roles, la razón de porqué es tan vital que se coordinen (planteando obstáculos diarios que dos integrantes del mismo equipo se encuentran a diario) además de consejos para aplicar las metodologías de trabajo de cada uno sin que nadie salga herido.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other",
+        "Other"
+      ]
+    },
+    "estrategiasbranching": {
+      "title": "Estrategias branching: trabajando con git y personas",
+      "description": "Todos conocemos Git. Sabemos hacer commit, hacer pull y push. Pero y cuando trabajamos en un equipo ¿como lo hacemos?\n\nHay estrategias de branching como GitFlow, Trunk based, environment Based,... al final lo que termina pasando es cuando las ramas son grandes acabamos haciendo carreras por ser el primero en hacer merge para que los conflictos sean para otro. En esta charla veremos algunas estrategias de branching como trunk based, environment branch (una rama por entorno) y como son las mejores maneras de hacer trabajar con git y las ramas sin que eso sea un caos.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Other",
+        "None"
+      ]
+    },
+    "extiendeasistente": {
+      "title": "Extiende al asistente",
+      "description": "¿Nunca te ha faltado alguna funcionalidad en el asistente qué usas? Puede que la haya en otro idioma pero no en el tuyo, somos impacientes ¿La hacemos? ¿Extendemos Google Assistant, Alexa y Cortana?",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Mobile;Accessibility",
+        "Javascript;.Net;Python"
+      ]
+    },
+    "introducciond3": {
+      "title": "Introducción a d3 y gráficas data-driven",
+      "description": "Las gráficas de una aplicación es una de esas tareas engañosas donde la complejidad de las opciones no se corresponde con la simplicidad del resultado. A la hora de representar información en una gráfica hay un tiempo de aprendizaje necesario para entender las herramientas y las opciones de representación de los datos.\n\nEn esta charla veremos los conceptos de 3.js para realizar gráficas data-driven. Veremos desde las formas de definir axis, cómo transformar los datos de tu modelo de negocio a conceptos cuantificables en el diagrama final, y cómo el API funcional de d3 nos permite de forma muy potente representar información con una sintaxis rápida y simple. Todo esto apoyado con toneladas de ejemplos, porque la mejor forma de aprender es fijándose en otros.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Web",
+        "Javascript"
+      ]
+    },
+    "desarrollachatbot": {
+      "title": "Desarrolla un chatbot para que trabaje por ti",
+      "description": "En esta charla enseñaremos cómo hacer un chatbot para que trabaje por ti y qué mejor manera que nos lo enseñe un chatbot. Aprenderemos:\n\nDialogflow para el procesamiento del lenguaje natural (NLP)\nDialogflow Fulfillment Library en Node para tratar la petición\nGoogle Cloud Function en Firebase para desplegar la funcionalidad\n\nAdemás enseñaré trucos y consideraciones a tener en cuenta aprendidos tras 1 año haciendo cositas con chatbots.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other;Web",
+        "Javascript"
+      ]
+    },
+    "statisticaltools": {
+      "title": "Statistical tools to solve common development problems",
+      "description": "Most common tasks can be solved with the usual combination of for / while / if / list / map, and if we don't know better it ends up being the golden solution to every problem, because we don't know the alternative.\n\nSome of these problems can also be solved using a set of statistical algorithms. These tools are not widely known, but will open your mind to non-procedural problem solving techniques, like:\n\nCalculate unique values for big data sets and streams with HyperLogLog.\n\nBorrow concepts from probability to replace and simplify if/else conditions. Use those to build an adaptive algorithm\n\nSome of these algorithms have been battle-tested by well-known databases. We will include a small demo and an analysis of accuracy with sample datasets.\n\nDon't worry! No previous math knowledge needed!",
+      "tags": [
+        "Talk",
+        "English",
+        "Intermediate",
+        "Other",
+        "Other"
+      ]
+    },
+    "servicemesh": {
+      "title": "Service Mesh for your Service Mess",
+      "description": "Building microservices is easy, operating a microservice architecture is hard. Many companies are successfully using tools like Kubernetes for deploys, but they still face runtime challenges when they have to perform routing, monitoring or security. Having a mess of tens, hundreds or even thousands of services comunicating in production is a job only for the very tough ones... Service Mesh is an architecural pattern that comes to solve these problems with a simple, clean approach.\n\nBy deploying sidecar proxies and other control elements interconecting your services, a Service Mesh creates a network abstraction that greatly simplifies the managing of containerized applications and makes it easier to dynamically route, monitor and secure microservice-based applications. In this talk we are going to explain this pattern and how to deploy it by walking through some of the top capabilities a Service Mesh allows, like:\n\nDynamic Intelligent Requests Routing\n\nTransparent Distributed Tracing\n\nTraffic monitoring (observability)\n\nSecurity (authentication+encryption)\n\nPolicy Enforcements (Rate Limits)\n\nLoad Balancing and Circuit Breaking\n\n",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Devops;Security;Cloud;Web",
+        "Other"
+      ]
+    },
+    "coffeebreak": {
+      "title": "Coffe Break",
+      "description": ""
+    }
+  },
+  "speakers": {
+    "mxsash": {
+      "name": "Sasha Romijn",
+      "country": "Django // The Netherlands",
+      "featured": true,
+      "company": "Django Software Foundation",
+      "title": "Security Team",
+      "photoUrl": "/images/people/speakers/mxsash.jpg",
+      "shortBio": "Distributor of stroopwafel-based happiness and Python code.",
+      "bio": "Sasha is the co-founder and CTO of a Django development company in Amsterdam. She is deeply involved in the community around Django, a popular Python web framework, being a Django team member, chair of the Dutch Django Association and co-organiser of various conferences. She cares about building communities and conferences in which everyone feels welcome, valued and at home, regardless of their background. Sasha has a specific interest in well-being and ethical issues around communities and development. Some of her side projects are the Less Obvious Conference Checklist, with many less obvious suggestions for event organisers, and Happiness Packets, to spread more gratitude and kindness in open source communities.",
+      "socials": [
+        {
+          "icon": "twitter",
+          "link": "https://twitter.com/mxsash",
+          "name": "Twitter"
+        }
+      ]
+    }
+  }
+}

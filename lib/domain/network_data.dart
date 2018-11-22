@@ -3,7 +3,7 @@ import 'package:commitconf/domain/parser.dart';
 import 'package:http/http.dart' as http;
 
 const URL =
-    'https://raw.githubusercontent.com/DACHFest/dachfest.com/master/docs/default-firebase-data.json';
+    'https://raw.githubusercontent.com/jmolins/commitconf/master/data/schedule-data.json';
 
 Future<String> fetchData() async {
   final response = await http.get(URL);

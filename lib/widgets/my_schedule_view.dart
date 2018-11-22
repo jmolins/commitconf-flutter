@@ -17,9 +17,12 @@ class MyScheduleView extends StatefulWidget {
 }
 
 class _MyScheduleViewState extends State<MyScheduleView> {
+  Stream<List<List<Attendance>>> _stream;
+
   @override
   void initState() {
     super.initState();
+    //_stream = widget.bloc.mySchedule;
   }
 
   @override
@@ -29,23 +32,35 @@ class _MyScheduleViewState extends State<MyScheduleView> {
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.active &&
               snapshot.data != null) {
+            int accumulatedExtend = 0;
             List<Attendance> daySchedule = snapshot.data[widget.day];
 
             return ListView.builder(
               scrollDirection: Axis.vertical,
               controller: widget.scrollController,
-              itemBuilder: (context, index) => Container(
-                    height: widget.height,
-                    width: widget.width,
-                    child: Column(
-                      children: <Widget>[
-                        Text(daySchedule[index].slotInfo.start),
-                        daySchedule[index].talk != null
-                            ? Text(daySchedule[index].talk.title)
-                            : Container(),
-                      ],
-                    ),
-                  ),
+              itemBuilder: (context, index) {
+                double height = 0.0;
+                if (accumulatedExtend == 0) {
+                  accumulatedExtend = daySchedule[index].talk.extendDown;
+                  height = widget.height * accumulatedExtend;
+                }
+                accumulatedExtend--;
+
+                return height != 0.0
+                    ? Container(
+                        height: height,
+                        width: widget.width,
+                        child: Column(
+                          children: <Widget>[
+                            Text(daySchedule[index].slotInfo.start),
+                            daySchedule[index].talk != null
+                                ? Text(daySchedule[index].talk.title)
+                                : Container(),
+                          ],
+                        ),
+                      )
+                    : SizedBox();
+              },
               itemCount: daySchedule.length,
             );
           } else {

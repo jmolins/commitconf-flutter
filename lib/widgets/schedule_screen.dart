@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:commitconf/domain/domain.dart';
-import 'package:commitconf/domain/local_data.dart';
-import 'package:commitconf/domain/network_data.dart';
 import 'package:commitconf/services/conference_bloc.dart';
 import 'package:commitconf/widgets/day_screen.dart';
 import 'package:flutter/material.dart';
@@ -25,16 +23,12 @@ class ScheduleScreenState extends State<ScheduleScreen> {
 
   Schedule _schedule;
 
-  Stream<Schedule> _scheduleStream;
   StreamSubscription<Schedule> _subscription;
 
   @override
   void initState() {
     super.initState();
-    // Load schedule file from here because we need the context
-    loadScheduleFromLocal();
-    _scheduleStream = widget.bloc.schedule;
-    _subscription = _scheduleStream.listen((schedule) {
+    _subscription = widget.bloc.schedule.listen((schedule) {
       setState(() {
         _schedule = schedule;
         _currentScreen = DayScreen(schedule.days[0], 0);
@@ -46,25 +40,6 @@ class ScheduleScreenState extends State<ScheduleScreen> {
   void dispose() {
     if (_subscription != null) _subscription.cancel();
     super.dispose();
-  }
-
-  void loadScheduleFromLocal() {
-    getSchedule(context).then((schedule) {
-      widget.bloc.setSchedule(schedule);
-      print("Loaded from local");
-    }).then((_) {
-      //loadScheduleFromNetwork();
-    });
-  }
-
-  void loadScheduleFromNetwork() {
-    getNetworkSchedule().then((schedule) {
-      widget.bloc.setSchedule(schedule);
-      print("Loaded from network");
-    }).catchError((error) {
-      print("Network Error :-(");
-      print(error);
-    });
   }
 
   @override

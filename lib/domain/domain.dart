@@ -1,8 +1,10 @@
 class Schedule {
   final List<Day> days;
+  final Map<String, Talk> talks;
 
   Schedule({
     this.days,
+    this.talks,
   });
 }
 
@@ -44,6 +46,8 @@ final emptyTalk = Talk(
   id: "",
   title: "",
   speakers: [],
+  extendRight: 1,
+  extendDown: 1,
 );
 
 class Talk {
@@ -62,6 +66,14 @@ class Talk {
     this.extendRight = 1,
     this.extendDown = 1,
   });
+
+  Talk.fromJson(Map<String, dynamic> json)
+      : this.id = json['id'],
+        this.title = json['title'],
+        this.description = json['description'],
+        this.speakers = json['speakers'],
+        this.extendRight = json['extendRight'],
+        this.extendDown = json['extendDown'];
 
   @override
   String toString() {
@@ -87,4 +99,11 @@ class Attendance {
   final SlotInfo slotInfo;
 
   Attendance({this.talk, this.slotInfo});
+
+  Attendance copyWith({Talk talk, SlotInfo slotInfo}) {
+    return Attendance(
+      talk: talk ?? this.talk,
+      slotInfo: slotInfo ?? this.slotInfo,
+    );
+  }
 }

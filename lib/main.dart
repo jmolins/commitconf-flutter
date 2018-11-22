@@ -12,6 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     var bloc = ConferenceBloc();
 
+    bloc.loadScheduleFromNetwork();
+
     return ConferenceBlocProvider(
       bloc: bloc,
       child: MaterialApp(

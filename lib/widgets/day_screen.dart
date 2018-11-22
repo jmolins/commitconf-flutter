@@ -280,8 +280,8 @@ class TalkCard extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             bloc.registerAttendance(talk, 0, slotInfo);
-            Scaffold.of(context).showSnackBar(
-                SnackBar(content: Text("${talk.title}, ${slotInfo.start}")));
+            /*Scaffold.of(context).showSnackBar(
+                SnackBar(content: Text("${talk.title}, ${slotInfo.start}")));*/
           },
           child: Card(
             color: Colors.white,
