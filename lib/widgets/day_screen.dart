@@ -21,7 +21,7 @@ class DayScreen extends StatefulWidget {
 class _DayScreenState extends State<DayScreen>
     with SingleTickerProviderStateMixin<DayScreen> {
   var _headerHeight = 40.0;
-  var _myTrackWidth = 160.0;
+  var _myTrackWidth = 200.0;
   var _timesWidth = 60.0;
 
   var _cellWidth = 100.0;
@@ -38,7 +38,7 @@ class _DayScreenState extends State<DayScreen>
 
   AnimationController animationController;
   Animation _myTrackWidthAnimation;
-  Animation _timesWidthAnimation;
+  Animation _scaleTransition;
 
   @override
   initState() {
@@ -49,22 +49,22 @@ class _DayScreenState extends State<DayScreen>
     };
     animationController =
         AnimationController(duration: Duration(milliseconds: 200), vsync: this);
-    _myTrackWidthAnimation =
-        Tween(begin: 0.0, end: _myTrackWidth).animate(animationController)
+    _myTrackWidthAnimation = Tween(begin: _timesWidth, end: _myTrackWidth)
+        .animate(animationController)
           ..addListener(() {
             setState(() {});
           });
-    _timesWidthAnimation =
-        Tween(begin: _timesWidth, end: 0.0).animate(animationController)
-          ..addListener(() {
-            setState(() {});
-          });
+    _scaleTransition = Tween(begin: 1.0, end: 0.0).animate(animationController)
+      ..addListener(() {
+        setState(() {});
+      });
   }
 
   List<Widget> _buildTracksHeader() {
     return widget.day.tracks.map((track) {
       return Container(
         width: _cellWidth,
+        color: Color(0xFFEEEEEE),
         child: Padding(
           padding: const EdgeInsets.all(3.0),
           child: Container(
@@ -86,11 +86,11 @@ class _DayScreenState extends State<DayScreen>
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         SizedBox(
-          width: _myTrackWidthAnimation.value + _timesWidthAnimation.value,
+          width: _myTrackWidthAnimation.value,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Row(
+              Stack(
                 children: <Widget>[
                   Opacity(
                     opacity: animationController.view.value,
@@ -109,13 +109,19 @@ class _DayScreenState extends State<DayScreen>
                       ),
                     ),
                   ),
-                  Container(
-                    height: _headerHeight,
-                    color: Color(0xFFEEEEEE),
-                    width: _timesWidthAnimation.value,
-                    child: IconButton(
-                      icon: Icon(Icons.calendar_today),
-                      onPressed: () => animationController.forward(),
+                  ScaleTransition(
+                    scale: _scaleTransition,
+                    child: Opacity(
+                      opacity: 1 - animationController.view.value,
+                      child: Container(
+                        height: _headerHeight,
+                        color: Color(0xFFEEEEEE),
+                        width: _myTrackWidthAnimation.value,
+                        child: IconButton(
+                          icon: Icon(Icons.calendar_today),
+                          onPressed: () => animationController.forward(),
+                        ),
+                      ),
                     ),
                   ),
                 ],
@@ -133,8 +139,7 @@ class _DayScreenState extends State<DayScreen>
                     day: widget.dayIndex,
                     height: _cellHeight,
                     myTrackWidth: _myTrackWidthAnimation.value,
-                    timesWidth: _timesWidthAnimation.value,
-                    opacity: animationController.view.value,
+                    scale: _scaleTransition,
                     scrollController: _myTrackScrollController,
                     bloc: ConferenceBlocProvider.of(context),
                   ),

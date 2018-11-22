@@ -6,8 +6,7 @@ class MyScheduleView extends StatefulWidget {
   final int day;
   final double height;
   final double myTrackWidth;
-  final double timesWidth;
-  final double opacity;
+  final Animation<double> scale;
   final ScrollController scrollController;
   final ConferenceBloc bloc;
 
@@ -15,8 +14,7 @@ class MyScheduleView extends StatefulWidget {
       {this.day,
       this.height,
       this.myTrackWidth,
-      this.timesWidth,
-      this.opacity,
+      this.scale,
       this.scrollController,
       this.bloc});
 
@@ -56,41 +54,32 @@ class _MyScheduleViewState extends State<MyScheduleView> {
                   }
                   accumulatedExtend--;
 
-                  return Row(children: [
-                    Opacity(
-                      opacity: widget.opacity,
-                      child: height != 0.0
-                          ? Container(
-                              height: height,
-                              width: widget.myTrackWidth,
+                  return height != 0.0
+                      ? Container(
+                          height: height,
+                          width: widget.myTrackWidth,
+                          child: Padding(
+                            padding: const EdgeInsets.all(3.0),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey),
+                              ),
                               child: Column(
                                 children: <Widget>[
                                   Text(daySchedule[index].slotInfo.start),
-                                  daySchedule[index].talk != null
-                                      ? Text(daySchedule[index].talk.title)
-                                      : Container(),
+                                  ScaleTransition(
+                                    scale: widget.scale
+                                        .drive(Tween(begin: 1.0, end: 0.0)),
+                                    child: daySchedule[index].talk != null
+                                        ? Text(daySchedule[index].talk.title)
+                                        : Container(),
+                                  ),
                                 ],
                               ),
-                            )
-                          : SizedBox(),
-                    ),
-                    Opacity(
-                      opacity: 1 - widget.opacity,
-                      child: Container(
-                        height: widget.height,
-                        width: widget.timesWidth,
-                        child: Padding(
-                          padding: const EdgeInsets.all(3.0),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              border: Border.all(color: Colors.grey),
                             ),
-                            child: Text(daySchedule[index].slotInfo.start),
                           ),
-                        ),
-                      ),
-                    ),
-                  ]);
+                        )
+                      : SizedBox();
                 },
                 itemCount: daySchedule.length,
               );

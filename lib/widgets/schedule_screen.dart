@@ -28,7 +28,6 @@ class ScheduleScreenState extends State<ScheduleScreen> {
   @override
   void initState() {
     super.initState();
-    print("init");
     _subscription = widget.bloc.schedule.listen((schedule) {
       setState(() {
         _schedule = schedule;
@@ -46,38 +45,41 @@ class ScheduleScreenState extends State<ScheduleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.0,
         title: Padding(
           padding: EdgeInsets.all(8.0),
-          child: Row(
-            children: <Widget>[
-              Image.asset(
-                'assets/logo.png',
-              ),
-              SizedBox(
-                width: 15.0,
-              ),
-              Text("Commit Conf")
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Image.asset('assets/logo.png'),
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.today),
-            title: Text("November 23"),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(
+              onTap: () => selectDate(0),
+              child: Column(
+                children: [
+                  Icon(Icons.today, color: Colors.black45),
+                  Text("November 23"),
+                ],
+              ),
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.today),
-            title: Text("November 24"),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: InkWell(
+              onTap: () => selectDate(1),
+              child: Column(
+                children: [
+                  Icon(Icons.today, color: Colors.black45),
+                  Text("November 24"),
+                ],
+              ),
+            ),
           ),
+          SizedBox(width: 15.0)
         ],
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
       ),
       body: _schedule == null
           ? Center(child: CircularProgressIndicator())
@@ -87,5 +89,11 @@ class ScheduleScreenState extends State<ScheduleScreen> {
               dayIndex: _currentIndex,
             ),
     );
+  }
+
+  void selectDate(int dateIndex) {
+    setState(() {
+      _currentIndex = dateIndex;
+    });
   }
 }

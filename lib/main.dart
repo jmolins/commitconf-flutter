@@ -18,6 +18,8 @@ class MyApp extends StatefulWidget {
 class MyAppState extends State<MyApp> {
   var bloc = ConferenceBloc();
 
+  final ThemeData base = ThemeData.light();
+
   @override
   void initState() {
     super.initState();
@@ -29,9 +31,14 @@ class MyAppState extends State<MyApp> {
     return ConferenceBlocProvider(
       bloc: bloc,
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'CommitConf app',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+        theme: base.copyWith(
+          primaryColor: Colors.grey[200],
+          scaffoldBackgroundColor: Colors.white,
+          primaryTextTheme:
+          base.primaryTextTheme.apply(bodyColor: Colors.grey[700]),
+          iconTheme: base.iconTheme.copyWith(color: Colors.black54),
         ),
         home: ScheduleScreen(
           bloc: bloc,

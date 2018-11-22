@@ -73,7 +73,6 @@ class ConferenceBloc {
           List<String> subList = list[i].cast<String>();
           talkIds.add(subList);
         }
-        print(talkIds);
       }
       for (int dayIndex = 0; dayIndex < _schedule.days.length; dayIndex++) {
         Day day = _schedule.days[dayIndex];

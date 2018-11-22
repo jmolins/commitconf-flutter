@@ -51,7 +51,8 @@
               ],
               "extendRight": 12
             }
-          ]
+          ],
+          "type": "divider"
         },
         {
           "startTime": "09:00",
@@ -207,7 +208,8 @@
               ],
               "extendRight": 12
             }
-          ]
+          ],
+          "type": "divider"
         }
       ]
     },
@@ -235,7 +237,8 @@
               ],
               "extendRight": 3
             }
-          ]
+          ],
+          "type": "divider"
         }
       ]
     }
