@@ -22,13 +22,13 @@ class _MyScheduleViewState extends State<MyScheduleView> {
   @override
   void initState() {
     super.initState();
-    //_stream = widget.bloc.mySchedule;
+    _stream = widget.bloc.mySchedule;
   }
 
   @override
   Widget build(BuildContext context) {
     return StreamBuilder(
-        stream: widget.bloc.mySchedule,
+        stream: _stream,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.active &&
               snapshot.data != null) {

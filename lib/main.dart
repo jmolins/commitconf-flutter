@@ -7,13 +7,25 @@ void main() async {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+// Make it stateful so ConferenceBloc is not recreated in hot-reload
+class MyApp extends StatefulWidget {
+  @override
+  MyAppState createState() {
+    return new MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
+  var bloc = ConferenceBloc();
+
+  @override
+  void initState() {
+    super.initState();
+    bloc.loadScheduleFromNetwork();
+  }
+
   @override
   Widget build(BuildContext context) {
-    var bloc = ConferenceBloc();
-
-    bloc.loadScheduleFromNetwork();
-
     return ConferenceBlocProvider(
       bloc: bloc,
       child: MaterialApp(

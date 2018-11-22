@@ -19,7 +19,6 @@ class ConferenceBloc {
   final _myScheduleController = BehaviorSubject<List<List<Attendance>>>();
 
   ConferenceBloc() {
-    print("initBlod");
     init();
   }
 
@@ -41,7 +40,6 @@ class ConferenceBloc {
       _myScheduleController.stream;
 
   void setSchedule(Schedule schedule) {
-    print("_setSchedule");
     _schedule = schedule;
     initMySchedule();
     _scheduleController.add(_schedule);
@@ -49,12 +47,7 @@ class ConferenceBloc {
   }
 
   void loadScheduleFromNetwork() async {
-    try {
-      setSchedule(await getNetworkSchedule());
-    } catch (error) {
-      print("Network Error :-(");
-      print(error);
-    }
+    setSchedule(await getNetworkSchedule());
   }
 
   /// Saves active sources to localstorage
@@ -65,34 +58,41 @@ class ConferenceBloc {
       }).toList();
     }).toList();
     prefs.setString(_kMyScheduleKey, jsonEncode(talkIds));
-    print(prefs.getString(_kMyScheduleKey));
   }
 
-/*  /// Loads active sources from localstorage
-  void loadMySchedule() {
-    String myScheduleString = prefs.getString(_kMyScheduleKey);
-    if (myScheduleString != null) {
-      activeSources = json.decode(myScheduleString).cast<String>();
-      if (activeSources.isNotEmpty) {
-        return;
-      }
-    }
-    // Getting here means we were not able to get valid sources
-    activeSources = ['cnn', 'bbc-news'];
-    saveSources();
-    return;
-  }*/
-
+  /// Loads personal schedule from localstorage
   void initMySchedule() {
     assert(_schedule != null);
     if (_mySchedule == null) {
-      _mySchedule = _schedule.days.map((day) {
-        print(day.id);
-        return day.slotInfo.map((slotInfo) {
-          print(slotInfo.start);
-          return Attendance(talk: emptyTalk, slotInfo: slotInfo);
-        }).toList();
-      }).toList();
+      _mySchedule = List.generate(2, (_) => <Attendance>[]);
+      String myScheduleString = prefs.getString(_kMyScheduleKey);
+      List<List<String>> talkIds = [];
+      if (myScheduleString != null) {
+        List<dynamic> list = jsonDecode(myScheduleString);
+        for (int i = 0; i < list.length; i++) {
+          List<String> subList = list[i].cast<String>();
+          talkIds.add(subList);
+        }
+        print(talkIds);
+      }
+      for (int dayIndex = 0; dayIndex < _schedule.days.length; dayIndex++) {
+        Day day = _schedule.days[dayIndex];
+        for (int slot = 0; slot < day.slotInfo.length; slot++) {
+          Talk talk;
+          if (talkIds != null) {
+            var talkId = talkIds[dayIndex][slot];
+            talk = _schedule.talks.containsKey(talkId)
+                ? _schedule.talks[talkId]
+                : emptyTalk;
+          }
+          _mySchedule[dayIndex].add(
+            Attendance(
+              talk: talk ?? emptyTalk,
+              slotInfo: day.slotInfo[slot],
+            ),
+          );
+        }
+      }
     }
   }
 
