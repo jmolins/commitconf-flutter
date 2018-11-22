@@ -17,9 +17,9 @@ class ScheduleScreen extends StatefulWidget {
 }
 
 class ScheduleScreenState extends State<ScheduleScreen> {
-  int _currentIndex = 0;
+  var keys = [UniqueKey(), UniqueKey()];
 
-  var _currentScreen;
+  int _currentIndex = 0;
 
   Schedule _schedule;
 
@@ -31,7 +31,6 @@ class ScheduleScreenState extends State<ScheduleScreen> {
     _subscription = widget.bloc.schedule.listen((schedule) {
       setState(() {
         _schedule = schedule;
-        _currentScreen = DayScreen(schedule.days[0], 0);
       });
     });
   }
@@ -76,13 +75,16 @@ class ScheduleScreenState extends State<ScheduleScreen> {
         onTap: (index) {
           setState(() {
             _currentIndex = index;
-            _currentScreen = DayScreen(_schedule.days[index], index);
           });
         },
       ),
       body: _schedule == null
           ? Center(child: CircularProgressIndicator())
-          : _currentScreen,
+          : DayScreen(
+              key: keys[_currentIndex],
+              day: _schedule.days[_currentIndex],
+              dayIndex: _currentIndex,
+            ),
     );
   }
 }

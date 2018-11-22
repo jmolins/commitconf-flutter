@@ -37,7 +37,7 @@
           "title": "Track B"
         },
         {
-          "title": "Track C"
+          "title": "Track Unconference"
         }
       ],
       "timeslots": [
@@ -215,13 +215,13 @@
       "dateReadable": "November 24",
       "tracks": [
         {
-          "title": "Track One"
+          "title": "Track 1"
         },
         {
-          "title": "Track Two"
+          "title": "Track 2"
         },
         {
-          "title": "Track A"
+          "title": "Track 3"
         }
       ],
       "timeslots": [
@@ -233,7 +233,7 @@
               "items": [
                 "registration"
               ],
-              "extentRight": 3
+              "extendRight": 3
             }
           ]
         }

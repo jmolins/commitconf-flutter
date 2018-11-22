@@ -10,7 +10,7 @@ class DayScreen extends StatefulWidget {
 
   final int dayIndex;
 
-  DayScreen(this.day, this.dayIndex) : assert(day != null);
+  DayScreen({key, this.day, this.dayIndex}) : assert(day != null), super(key: key);
 
   @override
   _DayScreenState createState() => _DayScreenState();
@@ -134,7 +134,7 @@ class TracksGrid extends StatefulWidget {
   final double cellWidth;
   final double cellHeight;
 
-  TracksGrid({this.day, this.cellWidth, this.cellHeight});
+  TracksGrid({key, this.day, this.cellWidth, this.cellHeight}) : super(key: key);
 
   @override
   _TracksGridState createState() => _TracksGridState();
