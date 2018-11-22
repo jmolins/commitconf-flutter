@@ -7,18 +7,17 @@ Map<String, dynamic> decode(String string) {
 }
 
 Schedule parseSchedule(Map<String, dynamic> data) {
-  final scheduleData = data['schedule'];
-  final day1Data = scheduleData['2018-11-23'];
-  final day2Data = scheduleData['2018-11-24'];
-  final day1 = parseDay(day1Data, data);
-  final day2 = parseDay(day2Data, data);
   return Schedule(
-    day1: day1,
-    day2: day2,
+    days: [
+      parseDay('2018-11-23', data),
+      parseDay('2018-11-24', data),
+    ],
   );
 }
 
-Day parseDay(Map<String, dynamic> daydata, Map<String, dynamic> data) {
+Day parseDay(String dayId, Map<String, dynamic> data) {
+  final daydata = data['schedule'][dayId];
+
   final List<dynamic> timeslots = daydata['timeslots'];
   final List<dynamic> tracks = daydata['tracks'];
 
@@ -27,7 +26,8 @@ Day parseDay(Map<String, dynamic> daydata, Map<String, dynamic> data) {
   final List<List<Talk>> trackList =
       List.generate(tracks.length, (_) => <Talk>[]);
 
-  for (final slot in timeslots) {
+  for (int slotIndex = 0; slotIndex < timeslots.length; slotIndex++) {
+    final slot = timeslots[slotIndex];
     final List<dynamic> sessions = slot['sessions'];
     var position = 0; // Position that defines a talk
     for (int t = 0; t < tracks.length; t++) {
@@ -46,6 +46,7 @@ Day parseDay(Map<String, dynamic> daydata, Map<String, dynamic> data) {
       }
     }
     slotInfo.add(SlotInfo(
+      position: slotIndex,
       start: slot['startTime'],
       end: slot['endTime'],
     ));
@@ -58,6 +59,7 @@ Day parseDay(Map<String, dynamic> daydata, Map<String, dynamic> data) {
   }
 
   return Day(
+    id: dayId,
     slotInfo: slotInfo,
     tracks: finalTracks,
   );

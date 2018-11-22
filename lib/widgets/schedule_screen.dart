@@ -1,11 +1,16 @@
+import 'dart:async';
+
 import 'package:commitconf/domain/domain.dart';
 import 'package:commitconf/domain/local_data.dart';
 import 'package:commitconf/domain/network_data.dart';
+import 'package:commitconf/services/conference_bloc.dart';
 import 'package:commitconf/widgets/day_screen.dart';
 import 'package:flutter/material.dart';
 
 class ScheduleScreen extends StatefulWidget {
-  ScheduleScreen();
+  final ConferenceBloc bloc;
+
+  ScheduleScreen({this.bloc});
 
   @override
   ScheduleScreenState createState() {
@@ -16,23 +21,37 @@ class ScheduleScreen extends StatefulWidget {
 class ScheduleScreenState extends State<ScheduleScreen> {
   int _currentIndex = 0;
 
+  var _currentScreen;
+
   Schedule _schedule;
 
-  var _currentScreen;
+  Stream<Schedule> _scheduleStream;
+  StreamSubscription<Schedule> _subscription;
 
   @override
   void initState() {
     super.initState();
+    // Load schedule file from here because we need the context
     loadScheduleFromLocal();
+    _scheduleStream = widget.bloc.schedule;
+    _subscription = _scheduleStream.listen((schedule) {
+      setState(() {
+        _schedule = schedule;
+        _currentScreen = DayScreen(schedule.days[0], 0);
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    if (_subscription != null) _subscription.cancel();
+    super.dispose();
   }
 
   void loadScheduleFromLocal() {
     getSchedule(context).then((schedule) {
-      setState(() {
-        _schedule = schedule;
-        _currentScreen = DayScreen(_schedule.day1);
-        print("Loaded from local");
-      });
+      widget.bloc.setSchedule(schedule);
+      print("Loaded from local");
     }).then((_) {
       //loadScheduleFromNetwork();
     });
@@ -40,10 +59,8 @@ class ScheduleScreenState extends State<ScheduleScreen> {
 
   void loadScheduleFromNetwork() {
     getNetworkSchedule().then((schedule) {
-      setState(() {
-        _schedule = schedule;
-        print("Loaded from network");
-      });
+      widget.bloc.setSchedule(schedule);
+      print("Loaded from network");
     }).catchError((error) {
       print("Network Error :-(");
       print(error);
@@ -84,20 +101,13 @@ class ScheduleScreenState extends State<ScheduleScreen> {
         onTap: (index) {
           setState(() {
             _currentIndex = index;
-            switch (index) {
-              case 0:
-                _currentScreen = DayScreen(_schedule.day1);
-                break;
-              case 1:
-                _currentScreen = DayScreen(_schedule.day2);
-                break;
-            }
+            _currentScreen = DayScreen(_schedule.days[index], index);
           });
         },
       ),
-      body: Container(
-        child: _currentScreen,
-      ),
+      body: _schedule == null
+          ? Center(child: CircularProgressIndicator())
+          : _currentScreen,
     );
   }
 }

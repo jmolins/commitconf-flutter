@@ -1,28 +1,30 @@
 class Schedule {
-  final Day day1;
-  final Day day2;
+  final List<Day> days;
 
   Schedule({
-    this.day1,
-    this.day2,
+    this.days,
   });
 }
 
 class SlotInfo {
+  final int position;
   final String start;
   final String end;
 
   SlotInfo({
+    this.position,
     this.start,
     this.end,
   });
 }
 
 class Day {
+  final String id;
   final List<Track> tracks;
   final List<SlotInfo> slotInfo;
 
   Day({
+    this.id,
     this.tracks,
     this.slotInfo,
   });
@@ -77,4 +79,12 @@ class Speaker {
     this.name,
     this.picture,
   });
+}
+
+/// Talk the user is attending
+class Attendance {
+  final Talk talk;
+  final SlotInfo slotInfo;
+
+  Attendance({this.talk, this.slotInfo});
 }

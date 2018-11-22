@@ -1,11 +1,16 @@
 import 'package:commitconf/domain/domain.dart';
+import 'package:commitconf/services/conference_bloc.dart';
+import 'package:commitconf/services/conference_bloc_provider.dart';
 import 'package:commitconf/widgets/bidirectional_scrollview.dart';
+import 'package:commitconf/widgets/my_schedule_view.dart';
 import 'package:flutter/material.dart';
 
 class DayScreen extends StatefulWidget {
   final Day day;
 
-  DayScreen(this.day) : assert(day != null);
+  final int dayIndex;
+
+  DayScreen(this.day, this.dayIndex) : assert(day != null);
 
   @override
   _DayScreenState createState() => _DayScreenState();
@@ -15,7 +20,7 @@ class _DayScreenState extends State<DayScreen> {
   var _headerHeight = 40.0;
   var _myTrackWidth = 120.0;
   var _cellWidth = 100.0;
-  var _cellHeight = 60.0;
+  var _cellHeight = 120.0;
 
   var _headerScrollController = ScrollController();
   var _myTrackScrollController = ScrollController();
@@ -46,16 +51,6 @@ class _DayScreenState extends State<DayScreen> {
     }).toList();
   }
 
-  List<Widget> _buildMyTrack() {
-    return List.generate(widget.day.slotInfo.length, (i) {
-      return Container(
-        width: _cellWidth,
-        height: _cellHeight,
-        color: i.isEven ? Colors.black45 : Colors.white,
-      );
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -79,10 +74,12 @@ class _DayScreenState extends State<DayScreen> {
                           notification.metrics.pixels;
                     }
                   },
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    controller: _myTrackScrollController,
-                    children: _buildMyTrack(),
+                  child: MyScheduleView(
+                    day: widget.dayIndex,
+                    height: _cellHeight,
+                    width: _myTrackWidth,
+                    scrollController: _myTrackScrollController,
+                    bloc: ConferenceBlocProvider.of(context),
                   ),
                 ),
               ),
@@ -144,7 +141,9 @@ class TracksGrid extends StatefulWidget {
 }
 
 class _TracksGridState extends State<TracksGrid> {
-  List<int> allTracksSlots = [];
+  ConferenceBloc _bloc;
+
+  List<int> _allTracksSlots = [];
 
   List<Track> _tracks;
   List<SlotInfo> _slots;
@@ -164,7 +163,7 @@ class _TracksGridState extends State<TracksGrid> {
     var talks = widget.day.tracks[0].talks;
 
     for (int i = 0; i < talks.length; i++) {
-      if (talks[i].extendRight == _trackCount) allTracksSlots.add(i);
+      if (talks[i].extendRight == _trackCount) _allTracksSlots.add(i);
     }
   }
 
@@ -174,6 +173,8 @@ class _TracksGridState extends State<TracksGrid> {
       if (_tracks[0].talks[slotIndex].extendRight == _trackCount) {
         rows.add(TalkCard(
           talk: _tracks[0].talks[slotIndex],
+          slotInfo: _slots[slotIndex],
+          bloc: _bloc,
           height: widget.cellHeight,
           width: widget.cellWidth * _trackCount,
         ));
@@ -205,6 +206,8 @@ class _TracksGridState extends State<TracksGrid> {
               //print("trackIndex: $trackIndex");
               localRowWidgets.add(TalkCard(
                 talk: _tracks[trackIndex].talks[localSlotIndex],
+                slotInfo: _slots[localSlotIndex],
+                bloc: _bloc,
                 height: widget.cellHeight,
                 width: widget.cellWidth,
               ));
@@ -216,6 +219,8 @@ class _TracksGridState extends State<TracksGrid> {
           // Now the last downward columns
           downWardTracks.forEach((trackIndex) => tempRow.add(TalkCard(
                 talk: _tracks[trackIndex].talks[slotIndex],
+                slotInfo: _slots[slotIndex],
+                bloc: _bloc,
                 height: widget.cellHeight * maxExtendDown,
                 width: widget.cellWidth,
               )));
@@ -230,6 +235,8 @@ class _TracksGridState extends State<TracksGrid> {
           for (var trackIndex = 0; trackIndex < _tracks.length; trackIndex++) {
             widgets.add(TalkCard(
               talk: _tracks[trackIndex].talks[slotIndex],
+              slotInfo: _slots[slotIndex],
+              bloc: _bloc,
               height: widget.cellHeight,
               width: widget.cellWidth,
             ));
@@ -246,6 +253,7 @@ class _TracksGridState extends State<TracksGrid> {
 
   @override
   Widget build(BuildContext context) {
+    _bloc = ConferenceBlocProvider.of(context);
     return Column(
       children: _buildTracksRows(),
     );
@@ -254,10 +262,12 @@ class _TracksGridState extends State<TracksGrid> {
 
 class TalkCard extends StatelessWidget {
   final Talk talk;
+  final SlotInfo slotInfo;
+  final ConferenceBloc bloc;
   final double height;
   final double width;
 
-  TalkCard({this.talk, this.height, this.width});
+  TalkCard({this.talk, this.slotInfo, this.bloc, this.height, this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -267,10 +277,17 @@ class TalkCard extends StatelessWidget {
       width: width,
       child: Padding(
         padding: EdgeInsets.all(4.0),
-        child: Card(
-          color: Colors.white,
-          child: Center(
-            child: Text(talk.title, overflow: TextOverflow.ellipsis),
+        child: GestureDetector(
+          onTap: () {
+            bloc.registerAttendance(talk, 0, slotInfo);
+            Scaffold.of(context).showSnackBar(
+                SnackBar(content: Text("${talk.title}, ${slotInfo.start}")));
+          },
+          child: Card(
+            color: Colors.white,
+            child: Center(
+              child: Text(talk.title, overflow: TextOverflow.ellipsis),
+            ),
           ),
         ),
       ),
