@@ -116,8 +116,7 @@ class _DayScreenState extends State<DayScreen>
                               icon: Icon(Icons.arrow_back_ios),
                               onPressed: () {
                                 animationController.reverse();
-                                ConferenceBlocProvider.of(context)
-                                    .myTrackIsShown = false;
+                                widget.bloc.myTrackIsShown = false;
                               },
                             ),
                             SizedBox(
@@ -146,8 +145,7 @@ class _DayScreenState extends State<DayScreen>
                           icon: Icon(Icons.calendar_today),
                           onPressed: () {
                             animationController.forward();
-                            ConferenceBlocProvider.of(context).myTrackIsShown =
-                                true;
+                            widget.bloc.myTrackIsShown = true;
                           },
                         ),
                       ),
@@ -164,13 +162,20 @@ class _DayScreenState extends State<DayScreen>
                           notification.metrics.pixels;
                     }
                   },
-                  child: MyScheduleView(
-                    day: widget.dayIndex,
-                    height: _cellHeight,
-                    myTrackWidth: _myTrackWidthAnimation.value,
-                    scale: _scaleTransition,
-                    scrollController: _myTrackScrollController,
-                    bloc: ConferenceBlocProvider.of(context),
+                  child: GestureDetector(
+                    onTap: () {
+                      if (!widget.bloc.myTrackIsShown) {
+                        animationController.forward();
+                      }
+                    },
+                    child: MyScheduleView(
+                      day: widget.dayIndex,
+                      height: _cellHeight,
+                      myTrackWidth: _myTrackWidthAnimation.value,
+                      scale: _scaleTransition,
+                      scrollController: _myTrackScrollController,
+                      bloc: ConferenceBlocProvider.of(context),
+                    ),
                   ),
                 ),
               ),
