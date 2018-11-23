@@ -46,7 +46,7 @@ class Track {
 
 final emptyTalk = Talk(
   id: "",
-  title: "- - - - -",
+  title: "",
   speakers: [],
   extendRight: 1,
   extendDown: 1,
@@ -59,6 +59,7 @@ class Talk {
   final List<Speaker> speakers;
   final int extendRight;
   final int extendDown;
+  final bool allTracks;
 
   Talk({
     this.id,
@@ -67,6 +68,7 @@ class Talk {
     this.speakers,
     this.extendRight = 1,
     this.extendDown = 1,
+    this.allTracks = false,
   });
 
   Talk.fromJson(Map<String, dynamic> json)
@@ -75,7 +77,8 @@ class Talk {
         this.description = json['description'],
         this.speakers = json['speakers'],
         this.extendRight = json['extendRight'],
-        this.extendDown = json['extendDown'];
+        this.extendDown = json['extendDown'],
+        this.allTracks = json['allTracks'];
 
   @override
   String toString() {
@@ -100,7 +103,10 @@ class Attendance {
   final Talk talk;
   final SlotInfo slotInfo;
 
-  Attendance({this.talk, this.slotInfo});
+  Attendance({
+    this.talk,
+    this.slotInfo,
+  });
 
   Attendance copyWith({Talk talk, SlotInfo slotInfo}) {
     return Attendance(

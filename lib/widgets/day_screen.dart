@@ -409,22 +409,25 @@ class TalkCard extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Align(
-                          alignment: Alignment.bottomLeft,
-                          child: ConstrainedBox(
-                            constraints:
-                                BoxConstraints(maxWidth: 35.0, maxHeight: 35.0),
-                            child: OverflowBox(
-                              child: IconButton(
-                                icon: Icon(Icons.today, color: Colors.black38),
-                                onPressed: () {
-                                  bloc.registerAttendance(
-                                      talk, dayIndex, slotInfo);
-                                },
+                        talk.allTracks
+                            ? SizedBox()
+                            : Align(
+                                alignment: Alignment.bottomLeft,
+                                child: ConstrainedBox(
+                                  constraints: BoxConstraints(
+                                      maxWidth: 35.0, maxHeight: 35.0),
+                                  child: OverflowBox(
+                                    child: IconButton(
+                                      icon: Icon(Icons.playlist_add,
+                                          color: Colors.black38),
+                                      onPressed: () {
+                                        bloc.registerAttendance(
+                                            talk, dayIndex, slotInfo);
+                                      },
+                                    ),
+                                  ),
+                                ),
                               ),
-                            ),
-                          ),
-                        )
                       ],
                     ),
             ),

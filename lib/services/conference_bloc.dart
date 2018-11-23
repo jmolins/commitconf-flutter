@@ -97,8 +97,7 @@ class ConferenceBloc {
           // automatically add it to the user agenda since it does not have the
           // option to choose
           if (talk == null) {
-            if (_schedule.days[dayIndex].tracks[0].talks[slot].extendRight ==
-                _schedule.days[dayIndex].tracks.length) {
+            if (_schedule.days[dayIndex].tracks[0].talks[slot].allTracks) {
               talk = _schedule.days[dayIndex].tracks[0].talks[slot];
             }
           }

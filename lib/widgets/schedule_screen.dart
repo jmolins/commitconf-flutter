@@ -57,8 +57,8 @@ class ScheduleScreenState extends State<ScheduleScreen> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        title: Padding(
-          padding: EdgeInsets.all(8.0),
+        leading: Padding(
+          padding: EdgeInsets.only(top: 8.0, left: 8.0, bottom: 8.0),
           child: Padding(
             padding: const EdgeInsets.all(5.0),
             child: Image.asset('assets/logo.png'),
