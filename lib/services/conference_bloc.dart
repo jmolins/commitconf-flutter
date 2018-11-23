@@ -58,6 +58,7 @@ class ConferenceBloc {
       }).toList();
     }).toList();
     prefs.setString(_kMyScheduleKey, jsonEncode(talkIds));
+    //prefs.remove(_kMyScheduleKey);
   }
 
   /// Loads personal schedule from localstorage
@@ -66,23 +67,36 @@ class ConferenceBloc {
     if (_mySchedule == null) {
       _mySchedule = List.generate(2, (_) => <Attendance>[]);
       String myScheduleString = prefs.getString(_kMyScheduleKey);
-      List<List<String>> talkIds = [];
+      List<List<String>> talkIds;
+      // If there are stored values
       if (myScheduleString != null) {
+        talkIds = [];
         List<dynamic> list = jsonDecode(myScheduleString);
         for (int i = 0; i < list.length; i++) {
           List<String> subList = list[i].cast<String>();
           talkIds.add(subList);
         }
       }
+      // Otherwise create an empty array
       for (int dayIndex = 0; dayIndex < _schedule.days.length; dayIndex++) {
         Day day = _schedule.days[dayIndex];
         for (int slot = 0; slot < day.slotInfo.length; slot++) {
           Talk talk;
-          if (talkIds != null) {
+          // talksIds will be not null if there was something stored previously
+          if (talkIds != null && slot < talkIds[dayIndex].length) {
             var talkId = talkIds[dayIndex][slot];
             talk = _schedule.talks.containsKey(talkId)
                 ? _schedule.talks[talkId]
                 : emptyTalk;
+          }
+          // If a talk occupies all the tracks in the global schedule, we
+          // automatically add it to the user agenda since it does not have the
+          // option to choose
+          if (talk == null) {
+            if (_schedule.days[dayIndex].tracks[0].talks[slot].extendRight ==
+                _schedule.days[dayIndex].tracks.length) {
+              talk = _schedule.days[dayIndex].tracks[0].talks[slot];
+            }
           }
           _mySchedule[dayIndex].add(
             Attendance(

@@ -183,6 +183,7 @@ class _DayScreenState extends State<DayScreen>
                 child: BidirectionalScrollView(
                   child: TracksGrid(
                     day: widget.day,
+                    dayIndex: widget.dayIndex,
                     cellHeight: _cellHeight,
                     cellWidth: _cellWidth,
                   ),
@@ -203,11 +204,12 @@ class _DayScreenState extends State<DayScreen>
 
 class TracksGrid extends StatefulWidget {
   final Day day;
+  final int dayIndex;
 
   final double cellWidth;
   final double cellHeight;
 
-  TracksGrid({key, this.day, this.cellWidth, this.cellHeight})
+  TracksGrid({key, this.day, this.dayIndex, this.cellWidth, this.cellHeight})
       : super(key: key);
 
   @override
@@ -246,6 +248,7 @@ class _TracksGridState extends State<TracksGrid> {
     for (var slotIndex = 0; slotIndex < _slotCount;) {
       if (_tracks[0].talks[slotIndex].extendRight == _trackCount) {
         rows.add(TalkCard(
+          dayIndex: widget.dayIndex,
           talk: _tracks[0].talks[slotIndex],
           slotInfo: _slots[slotIndex],
           bloc: _bloc,
@@ -279,6 +282,7 @@ class _TracksGridState extends State<TracksGrid> {
                 trackIndex++) {
               //print("trackIndex: $trackIndex");
               localRowWidgets.add(TalkCard(
+                dayIndex: widget.dayIndex,
                 talk: _tracks[trackIndex].talks[localSlotIndex],
                 slotInfo: _slots[localSlotIndex],
                 bloc: _bloc,
@@ -292,6 +296,7 @@ class _TracksGridState extends State<TracksGrid> {
 
           // Now the last downward columns
           downWardTracks.forEach((trackIndex) => tempRow.add(TalkCard(
+                dayIndex: widget.dayIndex,
                 talk: _tracks[trackIndex].talks[slotIndex],
                 slotInfo: _slots[slotIndex],
                 bloc: _bloc,
@@ -308,6 +313,7 @@ class _TracksGridState extends State<TracksGrid> {
           List<Widget> widgets = [];
           for (var trackIndex = 0; trackIndex < _tracks.length; trackIndex++) {
             widgets.add(TalkCard(
+              dayIndex: widget.dayIndex,
               talk: _tracks[trackIndex].talks[slotIndex],
               slotInfo: _slots[slotIndex],
               bloc: _bloc,
@@ -335,13 +341,20 @@ class _TracksGridState extends State<TracksGrid> {
 }
 
 class TalkCard extends StatelessWidget {
+  final int dayIndex;
   final Talk talk;
   final SlotInfo slotInfo;
   final ConferenceBloc bloc;
   final double height;
   final double width;
 
-  TalkCard({this.talk, this.slotInfo, this.bloc, this.height, this.width});
+  TalkCard(
+      {this.dayIndex,
+      this.talk,
+      this.slotInfo,
+      this.bloc,
+      this.height,
+      this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -385,7 +398,8 @@ class TalkCard extends StatelessWidget {
                               child: IconButton(
                                 icon: Icon(Icons.today, color: Colors.black38),
                                 onPressed: () {
-                                  bloc.registerAttendance(talk, 0, slotInfo);
+                                  bloc.registerAttendance(
+                                      talk, dayIndex, slotInfo);
                                 },
                               ),
                             ),

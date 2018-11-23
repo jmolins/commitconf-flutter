@@ -23,7 +23,7 @@ class MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    bloc.loadScheduleFromNetwork();
+    //bloc.loadScheduleFromNetwork();
   }
 
   @override
@@ -37,7 +37,7 @@ class MyAppState extends State<MyApp> {
           primaryColor: Colors.grey[200],
           scaffoldBackgroundColor: Colors.white,
           primaryTextTheme:
-          base.primaryTextTheme.apply(bodyColor: Colors.grey[700]),
+              base.primaryTextTheme.apply(bodyColor: Colors.grey[700]),
           iconTheme: base.iconTheme.copyWith(color: Colors.black54),
         ),
         home: ScheduleScreen(
