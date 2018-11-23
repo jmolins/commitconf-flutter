@@ -639,6 +639,57 @@
               ]
             }
           ]
+        },
+        {
+          "startTime": "17:30",
+          "endTime": "18:15",
+          "sessions": [
+            {
+              "items": [
+                "tipospegaso"
+              ]
+            },
+            {
+              "items": [
+                "virtualdom"
+              ]
+            },
+            {
+              "items": [
+                "tacklingtran"
+              ]
+            },
+            {
+              "items": [
+                "noobartificial"
+              ]
+            },
+            {
+              "items": [
+                "garbagecollection"
+              ]
+            },
+            {
+              "items": [
+                "metricaspiratas"
+              ]
+            },
+            {
+              "items": [
+                "comprendespark"
+              ]
+            },
+            {
+              "items": [
+                "cognitiveservice"
+              ]
+            },
+            {
+              "items": [
+                "videocondrones"
+              ]
+            }
+          ]
         }
       ]
     }
@@ -1591,9 +1642,75 @@
         "HTML/CSS;Javascript;Python"
       ]
     },
-    "00": {
-      "title": "",
-      "description": "",
+    "tipospegaso": {
+      "title": "Dame tus tipos Pegaso",
+      "description": "Desde hace varios meses en los que estamos en Karumi escribiendo código en Kotlin. En estos meses hemos aprendido unas cuantas técnicas y métodos que donde a traves de los tipos reducimos los errores y hacemos el camino del desarrollo más sencillo.\n\nLos tipos están de moda y vienen para quedarse. Enseñaremos ejemplos, código, usos y casuísticas que nos hemos encontrado en nuestro desarrollo en backend o Android y como usando la 'mítica armadura tipada' resolvemos problemas clásicos del desarrollo.\n\nAdemás resolvermos la eterna pregunta sobre si Seiya fue el primer repartidor de Glovo.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other;Mobile",
+        "Kotlin"
+      ]
+    },
+    "virtualdom": {
+      "title": "¿Cómo funciona un Virtual DOM?",
+      "description": "Utilizado por las librerías mas famosas como React y Vue, el Virtual DOM sigue siendo una de las partes mas ocultas y \"mágicas\" dentro de las mismas.\n\nSu principal labor es aumentar el rendimiento de nuestra aplicación a través de un renderizado más eficiente pero... ¿cómo lo consigue? ¿cómo funciona realmente por dentro?\n\nEn esta charla trataré de explicar de donde salió la idea de tener un Virtual DOM, cómo funciona y cómo este ha ido evolucionando en sus distintas implementaciones. Veremos también una pequeña implementación del mismo donde se le verá en acción y finalizaremos con una serie de conclusiones a considerar si usamos una librería que lo implemente.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Web",
+        "HTML/CSS;Javascript"
+      ]
+    },
+    "tacklingtran": {
+      "title": "Tackling transactions in a Microservices application",
+      "description": "ACID transactions in a monolithic application are a great, powerful and simple tool, that helps us guaranteeing data consistency inside our application.\n\nBut... what happens when we move from monolithic applications to distributed systems? We don't have ACID transactions in a big database anymore, and there is also a choice to make regarding the CAP theorem. But... is all hope lost? Or can we still somehow have transactions across service boundaries?\n\nIn this talk we will try to understand that complexity, see some alternatives, and how the *SAGA pattern *comes to the rescue here.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other",
+        "None"
+      ]
+    },
+    "noobartificial": {
+      "title": "Cómo dejar de ser un noob gracias a la Inteligencia Artificial",
+      "description": "En pleno auge de la Inteligencia Artificial cada vez es mayor la necesidad de disponer de entornos controlados, replicables y con una cantidad infinita de datos etiquetados, por lo que cada vez está más extendido el empleo de algoritmos de Inteligencia Artificial y Machine Learning al mundo de los videojuegos como entornos de prueba antes de aplicarlos a datos reales en diversos campos como pueden ser medicina, ciberseguridad o banca electrónica.\n\nEn esta ponencia se presentarán demos en directo de técnicas de Inteligencia Artificial y Machine Learning en distintos videojuegos, desde los clásicos de ATARI hasta juegos de mundo abierto como Minecraft. El futuro del mundo del videojuego en el que los niveles se diseñen específicamente para cada persona basándose en los skills de cada jugador cada día está más cerca.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Games;Other",
+        "Java;Other"
+      ]
+    },
+    "garbagecollection": {
+      "title": "Garbage collection: estado del arte",
+      "description": "La mayoría de los lenguajes de programación en uso, y casi todos los de reciente creación, gestionan automáticamente la memoria. De entre las múltiples técnicas en las que se puede basar esa gestión automática, la recogida de basura (Garbage Collection) sigue siendo la predominante.\n\nEl cambio de rumbo que ha llevado a los lenguajes a gestionar automáticamente la memoria, ha llevado parejo una aceptación tan absoluta por parte de quienes los usan que casi se podría hablar de total despreocupación. Hoy en día es difícil encontrar a alguien que sepa explicar, aunque sea muy someramente, cómo funciona un Garbage Collector (GC) Tampoco es de extrañar, porque es muy difícil encontrar información sobre el funcionamiento del GC de muchos runtimes y, lo poco que se encuentra, asume que se tiene un conocimiento profundo del tema.\n\nLa situación anterior es más llamativa cuando se compara con la información disponible sobre otros detalles del funcionamiento de un runtime o una VM moderna. Hay multitud de charlas sobre optimización de código, estructura de objetos, JIT, gestión de threads, etc. Todas ellas amparadas en que es un conocimiento necesario cuando se está tratando de optimizar el rendimiento de una parte crítica de un programa.\n\nCuriosamente, la primera optimización que necesitan muchos programas es un uso más racional de la memoria. Y no sólo porque se use menos y se acceda con mejor localidad, sino porque no se enfrente a las políticas y expectativas del GC. Hay decisiones como organización de los datos, cachés, modificación vs copia, etc., que para tomarlas hay que conocer tanto nuestro programa como el GC que va a gestionar su memoria. Y muchas veces es posible conseguir una mejora de rendimiento sin cambiar nuestro código, simplemente eligiendo otro GC o modificando algunos de sus parámetros.\n\nEste workshop es nuestra pequeña aportación para intentar ayudar a que se conozca mejor qué ocurre cuando la memoria está gestionada por un GC",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Soft skills",
+        "Java;Go;Javascript"
+      ]
+    },
+    "metricaspiratas": {
+      "title": "Métricas para piratas, AARRR! (o cómo mantener la confianza de tu equipo a flote)",
+      "description": "Unirse a una startup es como alistarse en el barco de colón cuando iba en busca de las indias por un nuevo camino. Aunque en el caso de una startup los miembros se suelen unir porque confían y posiblemente admiren a los fundadores y porque creen en la misión.\n\nSin embargo, al igual que los barcos, si los fundadores no gestionan bien las expectativas del equipo y además estos pasan demasiado tiempo remando sin ver tierra, lo más seguro es que se sientan a la deriva y terminen perdiendo la motivación y la confianza, lo que seguramente hará que abandonen el barco.\n\nEspecialmente en una startup, donde los tiempos y los fondos son tan reducidos, este puede ser un factor crítico. Por eso que el objetivo de esta charla es aprender una metodología práctica que define en cinco etapas el funnel de conversión desde que un potencial usuario escucha hablar de nosotros hasta que se convierte en cliente recurrente.\n\nAdemás de conocer las cinco etapas del funnel veremos qué métricas se pueden establecer en cada fase, qué herramientas se podrían usar, y qué factores pueden ayudar o perjudicar a cada etapa.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Agile and Lean;Other",
+        "None"
+      ]
+    },
+    "comprendespark": {
+      "title": "Comprendiendo (y criticando) Spark por medio de la programación funcional",
+      "description": "Spark es sin duda el framework para procesamiento de Big Data más popular del momento. No vamos a echar la culpa de todo este éxito clamoroso a la programación funcional porque se nos vería el plumero, pero no cabe duda de que el uso de las funciones de orden superior, la declaratividad, y otras técnicas funcionales utilizadas en la implementación del framework han contribuido de forma significativa a su popularización y efectividad. En esta charla mostraremos cómo la programación funcional nos puede ayudar a programar de forma más legible, modular y eficiente en Spark, y a comprender mejor cómo funciona el framework. En la charla también criticaremos algunas decisiones de diseño y veremos cómo, casualmente, los defectos resultantes se encuentran íntimamente relacionados con el abandono de los principios de diseño funcional.",
       "tags": [
         "Talk",
         "Spanish",
@@ -1602,37 +1719,26 @@
         "Other"
       ]
     },
-    "aa": {
-      "title": "",
-      "description": "",
+    "cognitiveservice": {
+      "title": "Cognitive as a service",
+      "description": "There are many scenarios in which we wished our apps would see and listen just as a human does. In this talk we will discover a series of powerful services which are ready to be used in an easy and fast way, and we will see the potential that this all has by showing some real life examples as well as some live demos to get started using Microsoft Cognitive Services.",
       "tags": [
         "Talk",
-        "Spanish",
-        "Intermediate",
-        "Other",
-        "Other"
+        "English",
+        "Beginner",
+        "Cloud;Machine larning",
+        "Javascript;.Net;Python"
       ]
     },
-    "bb": {
-      "title": "",
-      "description": "",
+    "videocondrones": {
+      "title": "Videoconferencias o control remoto de drones: Todo es posible con WebRTC y OpenVidu",
+      "description": "WebRTC es un conjunto de estándares y tecnologías para incluir audio y vídeo de baja latencia en una página web o una aplicación móvil. Con WebRTC se pueden hacer videoconferencias o controlar drones desde tu navegador web, en desktop, tablets o móviles, sin extensiones especiales. Pero el estándar WebRTC es de muy bajo nivel y requiere tener en cuenta muchos detalles para que se pueda usar. Además, dependiendo del tipo de aplicación, es necesario configurar diferentes servicios en el backend, lo que lo hace todavía más complicado.\n\nAfortunadamete para los desarrolladores, existen plataformas que simplifican la creación de aplicaciones para los casos de uso más más habituales: videoconferencias en grupo, visualización de cámaras IP, grabación, etc. La mayoría de estas plataformas se ofrecen como servicio y otras muchas requiren del pago de licencia. Pero existen algunas con licencia libre muy utilizadas en la industria.\n\nEn esta charla te contaré en más detalle qué es WebRTC y cómo usar la plataforma libre OpenVidu para crear aplicaciones web que incluyan videoconferencia en grupo o visualización en tiempo real de cámaras IP. Verás lo fácil que es.",
       "tags": [
         "Talk",
         "Spanish",
         "Intermediate",
-        "Other",
-        "Other"
-      ]
-    },
-    "cc": {
-      "title": "",
-      "description": "",
-      "tags": [
-        "Talk",
-        "Spanish",
-        "Intermediate",
-        "Other",
-        "Other"
+        "Mobile;Web",
+        "Java;Javascript"
       ]
     },
     "coffeebreak": {

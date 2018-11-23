@@ -387,58 +387,60 @@ class TalkCard extends StatelessWidget {
       //color: Colors.grey,
       height: isDivider ? kDividerSlotHeight : height,
       width: width,
-      child: Padding(
-        padding: EdgeInsets.all(3.0),
-        child: GestureDetector(
-          onTap: null,
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey),
-              color: isDivider ? Color(0xFFEEEEEE) : Colors.transparent,
-            ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: isDivider
-                  ? Center(
-                      child: Text(talk.title),
-                    )
-                  : Stack(
-                      children: <Widget>[
-                        Center(
-                          child: Align(
-                            alignment: Alignment.topCenter,
-                            child: Text(
-                              talk.title,
-                              textAlign: TextAlign.center,
-                              style: TextStyle(color: Colors.lightBlue),
-                            ),
-                          ),
-                        ),
-                        talk.allTracks
-                            ? SizedBox()
-                            : Align(
-                                alignment: Alignment.bottomLeft,
-                                child: ConstrainedBox(
-                                  constraints: BoxConstraints(
-                                      maxWidth: 35.0, maxHeight: 35.0),
-                                  child: OverflowBox(
-                                    child: IconButton(
-                                      icon: Icon(Icons.playlist_add,
-                                          color: Colors.black38),
-                                      onPressed: () {
-                                        bloc.registerAttendance(
-                                            talk, dayIndex, slotInfo);
-                                      },
-                                    ),
+      child: talk.id == ""
+          ? SizedBox()
+          : Padding(
+              padding: EdgeInsets.all(3.0),
+              child: GestureDetector(
+                onTap: null,
+                child: Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.grey),
+                    color: isDivider ? Color(0xFFEEEEEE) : Colors.transparent,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: isDivider
+                        ? Center(
+                            child: Text(talk.title),
+                          )
+                        : Stack(
+                            children: <Widget>[
+                              Center(
+                                child: Align(
+                                  alignment: Alignment.topCenter,
+                                  child: Text(
+                                    talk.title,
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(color: Colors.lightBlue),
                                   ),
                                 ),
                               ),
-                      ],
-                    ),
+                              talk.allTracks
+                                  ? SizedBox()
+                                  : Align(
+                                      alignment: Alignment.bottomLeft,
+                                      child: ConstrainedBox(
+                                        constraints: BoxConstraints(
+                                            maxWidth: 35.0, maxHeight: 35.0),
+                                        child: OverflowBox(
+                                          child: IconButton(
+                                            icon: Icon(Icons.playlist_add,
+                                                color: Colors.black38),
+                                            onPressed: () {
+                                              bloc.registerAttendance(
+                                                  talk, dayIndex, slotInfo);
+                                            },
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                            ],
+                          ),
+                  ),
+                ),
+              ),
             ),
-          ),
-        ),
-      ),
     );
   }
 }
