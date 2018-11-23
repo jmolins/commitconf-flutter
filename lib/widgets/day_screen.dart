@@ -1,6 +1,7 @@
 import 'package:commitconf/domain/domain.dart';
 import 'package:commitconf/services/conference_bloc.dart';
 import 'package:commitconf/services/conference_bloc_provider.dart';
+import 'package:commitconf/utils/constants.dart';
 import 'package:commitconf/widgets/bidirectional_scrollview.dart';
 import 'package:commitconf/widgets/my_schedule_view.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +25,8 @@ class _DayScreenState extends State<DayScreen>
   var _myTrackWidth = 200.0;
   var _timesWidth = 60.0;
 
-  var _cellWidth = 100.0;
-  var _cellHeight = 120.0;
+  var _cellWidth = 180.0;
+  var _cellHeight = 140.0;
 
   var _headerScrollController = ScrollController();
   var _myTrackScrollController = ScrollController();
@@ -99,12 +100,22 @@ class _DayScreenState extends State<DayScreen>
                       width: _myTrackWidthAnimation.value,
                       color: Color(0xFFEEEEEE),
                       child: Center(
-                        child: GestureDetector(
-                          onTap: () => animationController.reverse(),
-                          child: Text(
-                            "My Track",
-                            style: Theme.of(context).textTheme.title,
-                          ),
+                        child: Row(
+                          children: <Widget>[
+                            IconButton(
+                              icon: Icon(Icons.arrow_back_ios),
+                              onPressed: () => animationController.reverse(),
+                            ),
+                            SizedBox(
+                              width: 20.0,
+                            ),
+                            Expanded(
+                              child: Text(
+                                "My Track",
+                                style: Theme.of(context).textTheme.title,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -334,24 +345,54 @@ class TalkCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDivider = "divider" == slotInfo.type;
+
     return Container(
       //color: Colors.grey,
-      height: height,
+      height: isDivider ? kDividerSlotHeight : height,
       width: width,
       child: Padding(
         padding: EdgeInsets.all(3.0),
         child: GestureDetector(
-          onTap: () {
-            bloc.registerAttendance(talk, 0, slotInfo);
-            /*Scaffold.of(context).showSnackBar(
-                SnackBar(content: Text("${talk.title}, ${slotInfo.start}")));*/
-          },
+          onTap: null,
           child: Container(
             decoration: BoxDecoration(
               border: Border.all(color: Colors.grey),
+              color: isDivider ? Color(0xFFEEEEEE) : Colors.transparent,
             ),
-            child: Center(
-              child: Text(talk.title, overflow: TextOverflow.ellipsis),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Stack(
+                children: <Widget>[
+                  Center(
+                    child: Align(
+                      alignment: Alignment.topCenter,
+                      child: Text(
+                        talk.title,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.lightBlue),
+                      ),
+                    ),
+                  ),
+                  isDivider
+                      ? SizedBox()
+                      : Align(
+                          alignment: Alignment.bottomLeft,
+                          child: ConstrainedBox(
+                            constraints:
+                                BoxConstraints(maxWidth: 35.0, maxHeight: 35.0),
+                            child: OverflowBox(
+                              child: IconButton(
+                                icon: Icon(Icons.today, color: Colors.black38),
+                                onPressed: () {
+                                  bloc.registerAttendance(talk, 0, slotInfo);
+                                },
+                              ),
+                            ),
+                          ),
+                        )
+                ],
+              ),
             ),
           ),
         ),

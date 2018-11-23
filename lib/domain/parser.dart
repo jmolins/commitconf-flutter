@@ -54,6 +54,7 @@ Day parseDay(String dayId, Map<String, dynamic> data, Map<String, Talk> talks) {
       position: slotIndex,
       start: slot['startTime'],
       end: slot['endTime'],
+      type: slot['type'],
     ));
   }
 

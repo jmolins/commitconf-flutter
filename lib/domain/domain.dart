@@ -12,11 +12,13 @@ class SlotInfo {
   final int position;
   final String start;
   final String end;
+  final String type;
 
   SlotInfo({
     this.position,
     this.start,
     this.end,
+    this.type,
   });
 }
 
@@ -44,7 +46,7 @@ class Track {
 
 final emptyTalk = Talk(
   id: "",
-  title: "",
+  title: "- - - - -",
   speakers: [],
   extendRight: 1,
   extendDown: 1,

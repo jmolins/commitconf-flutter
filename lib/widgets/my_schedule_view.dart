@@ -1,5 +1,6 @@
 import 'package:commitconf/domain/domain.dart';
 import 'package:commitconf/services/conference_bloc.dart';
+import 'package:commitconf/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class MyScheduleView extends StatefulWidget {
@@ -53,6 +54,11 @@ class _MyScheduleViewState extends State<MyScheduleView> {
                     height = widget.height * accumulatedExtend;
                   }
                   accumulatedExtend--;
+                  bool isDivider =
+                      "divider" == daySchedule[index].slotInfo.type;
+                  if (isDivider) {
+                    height = kDividerSlotHeight;
+                  }
 
                   return height != 0.0
                       ? Container(
@@ -63,18 +69,35 @@ class _MyScheduleViewState extends State<MyScheduleView> {
                             child: Container(
                               decoration: BoxDecoration(
                                 border: Border.all(color: Colors.grey),
+                                color: isDivider
+                                    ? Color(0xFFEEEEEE)
+                                    : Colors.transparent,
                               ),
-                              child: Column(
-                                children: <Widget>[
-                                  Text(daySchedule[index].slotInfo.start),
-                                  ScaleTransition(
-                                    scale: widget.scale
-                                        .drive(Tween(begin: 1.0, end: 0.0)),
-                                    child: daySchedule[index].talk != null
-                                        ? Text(daySchedule[index].talk.title)
-                                        : Container(),
-                                  ),
-                                ],
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 2.0),
+                                child: Column(
+                                  children: <Widget>[
+                                    Text(
+                                      daySchedule[index].slotInfo.start,
+                                      textAlign: TextAlign.center,
+                                    ),
+                                    SizedBox(
+                                      height: 3.0,
+                                    ),
+                                    Expanded(
+                                      child: ScaleTransition(
+                                        scale: widget.scale
+                                            .drive(Tween(begin: 1.0, end: 0.0)),
+                                        child: daySchedule[index].talk != null
+                                            ? Text(
+                                                daySchedule[index].talk.title,
+                                                textAlign: TextAlign.center,
+                                              )
+                                            : Container(),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),

@@ -1,0 +1,1 @@
+const kDividerSlotHeight = 50.0;
