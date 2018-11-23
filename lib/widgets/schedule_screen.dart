@@ -98,6 +98,7 @@ class ScheduleScreenState extends State<ScheduleScreen> {
               key: keys[_currentIndex],
               day: _schedule.days[_currentIndex],
               dayIndex: _currentIndex,
+              bloc: widget.bloc,
             ),
     );
   }

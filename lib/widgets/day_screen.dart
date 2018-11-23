@@ -8,11 +8,12 @@ import 'package:flutter/material.dart';
 
 class DayScreen extends StatefulWidget {
   final Day day;
-
   final int dayIndex;
+  ConferenceBloc bloc;
 
-  DayScreen({key, this.day, this.dayIndex})
+  DayScreen({key, this.day, this.dayIndex = 0, this.bloc})
       : assert(day != null),
+        assert(bloc != null),
         super(key: key);
 
   @override
@@ -59,6 +60,15 @@ class _DayScreenState extends State<DayScreen>
       ..addListener(() {
         setState(() {});
       });
+    if (widget.bloc.myTrackIsShown) {
+      animationController.value = _myTrackWidth;
+    }
+  }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
   }
 
   List<Widget> _buildTracksHeader() {
@@ -104,7 +114,11 @@ class _DayScreenState extends State<DayScreen>
                           children: <Widget>[
                             IconButton(
                               icon: Icon(Icons.arrow_back_ios),
-                              onPressed: () => animationController.reverse(),
+                              onPressed: () {
+                                animationController.reverse();
+                                ConferenceBlocProvider.of(context)
+                                    .myTrackIsShown = false;
+                              },
                             ),
                             SizedBox(
                               width: 20.0,
@@ -130,7 +144,11 @@ class _DayScreenState extends State<DayScreen>
                         width: _myTrackWidthAnimation.value,
                         child: IconButton(
                           icon: Icon(Icons.calendar_today),
-                          onPressed: () => animationController.forward(),
+                          onPressed: () {
+                            animationController.forward();
+                            ConferenceBlocProvider.of(context).myTrackIsShown =
+                                true;
+                          },
                         ),
                       ),
                     ),

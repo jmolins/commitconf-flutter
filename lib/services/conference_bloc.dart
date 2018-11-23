@@ -18,6 +18,10 @@ class ConferenceBloc {
   final _scheduleController = PublishSubject<Schedule>();
   final _myScheduleController = BehaviorSubject<List<List<Attendance>>>();
 
+  // keeps track of the opening status of the myTrack bar in day screen
+  // with the goal to keep it opened when switching days
+  bool myTrackIsShown = false;
+
   ConferenceBloc() {
     init();
   }
