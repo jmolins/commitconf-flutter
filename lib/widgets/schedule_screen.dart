@@ -65,14 +65,23 @@ class ScheduleScreenState extends State<ScheduleScreen> {
           ),
         ),
         actions: [
+          // This buttons could be extracted to a widget
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
               onTap: () => selectDate(0),
               child: Column(
                 children: [
-                  Icon(Icons.today, color: Colors.black45),
-                  Text("November 23"),
+                  Icon(
+                    Icons.today,
+                    color: _currentIndex == 0 ? Colors.black87 : Colors.black26,
+                  ),
+                  Text(
+                    "November 23",
+                    style: TextStyle(
+                      color: _currentIndex == 0 ? Colors.black : Colors.black38,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -83,8 +92,16 @@ class ScheduleScreenState extends State<ScheduleScreen> {
               onTap: () => selectDate(1),
               child: Column(
                 children: [
-                  Icon(Icons.today, color: Colors.black45),
-                  Text("November 24"),
+                  Icon(
+                    Icons.today,
+                    color: _currentIndex == 0 ? Colors.black26 : Colors.black87,
+                  ),
+                  Text(
+                    "November 24",
+                    style: TextStyle(
+                      color: _currentIndex == 0 ? Colors.black38 : Colors.black,
+                    ),
+                  ),
                 ],
               ),
             ),
