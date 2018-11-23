@@ -393,21 +393,23 @@ class TalkCard extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Stack(
-                children: <Widget>[
-                  Center(
-                    child: Align(
-                      alignment: Alignment.topCenter,
-                      child: Text(
-                        talk.title,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.lightBlue),
-                      ),
-                    ),
-                  ),
-                  isDivider
-                      ? SizedBox()
-                      : Align(
+              child: isDivider
+                  ? Center(
+                      child: Text(talk.title),
+                    )
+                  : Stack(
+                      children: <Widget>[
+                        Center(
+                          child: Align(
+                            alignment: Alignment.topCenter,
+                            child: Text(
+                              talk.title,
+                              textAlign: TextAlign.center,
+                              style: TextStyle(color: Colors.lightBlue),
+                            ),
+                          ),
+                        ),
+                        Align(
                           alignment: Alignment.bottomLeft,
                           child: ConstrainedBox(
                             constraints:
@@ -423,8 +425,8 @@ class TalkCard extends StatelessWidget {
                             ),
                           ),
                         )
-                ],
-              ),
+                      ],
+                    ),
             ),
           ),
         ),
