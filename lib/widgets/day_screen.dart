@@ -26,7 +26,7 @@ class _DayScreenState extends State<DayScreen>
   var _myTrackWidth = 200.0;
   var _timesWidth = 60.0;
 
-  var _cellWidth = 180.0;
+  var _cellWidth = 190.0;
   var _cellHeight = 140.0;
 
   var _headerScrollController = ScrollController();

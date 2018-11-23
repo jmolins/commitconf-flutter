@@ -24,6 +24,11 @@ Day parseDay(String dayId, Map<String, dynamic> data, Map<String, Talk> talks) {
   final List<dynamic> timeslots = daydata['timeslots'];
   final List<dynamic> tracks = daydata['tracks'];
 
+  List<String> trackNames = [];
+  for (int i = 0; i < tracks.length; i++) {
+    trackNames.add(daydata['tracks'][i]['title']);
+  }
+
   final slotInfo = <SlotInfo>[];
 
   final List<List<Talk>> trackList =
@@ -46,6 +51,7 @@ Day parseDay(String dayId, Map<String, dynamic> data, Map<String, Talk> talks) {
         Talk talk = parseTalk(
           talkData,
           data,
+          trackNames[t],
           extendRight == trackList.length,
           extendRight,
           extendDown,
@@ -77,7 +83,7 @@ Day parseDay(String dayId, Map<String, dynamic> data, Map<String, Talk> talks) {
   );
 }
 
-Talk parseTalk(id, Map<String, dynamic> data, bool allTracks,
+Talk parseTalk(id, Map<String, dynamic> data, String track, bool allTracks,
     [int extendRight = 1, int extendDown = 1]) {
   final talk = data['sessions'][id];
 
@@ -89,6 +95,7 @@ Talk parseTalk(id, Map<String, dynamic> data, bool allTracks,
     extendRight: extendRight,
     extendDown: extendDown,
     allTracks: allTracks,
+    track: track,
   );
 }
 

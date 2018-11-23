@@ -48,14 +48,14 @@ class _MyScheduleViewState extends State<MyScheduleView> {
                 scrollDirection: Axis.vertical,
                 controller: widget.scrollController,
                 itemBuilder: (context, index) {
+                  Attendance att = daySchedule[index];
                   double height = 0.0;
                   if (accumulatedExtend == 0) {
-                    accumulatedExtend = daySchedule[index].talk.extendDown;
+                    accumulatedExtend = att.talk.extendDown;
                     height = widget.height * accumulatedExtend;
                   }
                   accumulatedExtend--;
-                  bool isDivider =
-                      "divider" == daySchedule[index].slotInfo.type;
+                  bool isDivider = "divider" == att.slotInfo.type;
                   if (isDivider) {
                     height = kDividerSlotHeight;
                   }
@@ -77,25 +77,55 @@ class _MyScheduleViewState extends State<MyScheduleView> {
                                 padding: const EdgeInsets.only(top: 2.0),
                                 child: Column(
                                   children: <Widget>[
-                                    Text(
-                                      daySchedule[index].slotInfo.start,
-                                      textAlign: TextAlign.center,
-                                    ),
+                                    Text(att.slotInfo.start,
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                            fontSize: 16.0,
+                                            color: Colors.black54)),
                                     SizedBox(
-                                      height: 3.0,
+                                      height: isDivider ? 3.0 : 5.0,
                                     ),
                                     Expanded(
                                       child: ScaleTransition(
                                         scale: widget.scale
                                             .drive(Tween(begin: 1.0, end: 0.0)),
-                                        child: daySchedule[index].talk != null
-                                            ? Text(
-                                                daySchedule[index].talk.title,
-                                                textAlign: TextAlign.center,
+                                        child: att.talk != null
+                                            ? Column(
+                                                children: [
+                                                  Expanded(
+                                                    child: Padding(
+                                                      padding:
+                                                          EdgeInsets.symmetric(
+                                                              horizontal: 5.0),
+                                                      child: Text(
+                                                        att.talk.title,
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        style: TextStyle(
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            color:
+                                                                Colors.black54),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  isDivider
+                                                      ? SizedBox()
+                                                      : Text(att.talk.track,
+                                                          style: TextStyle(
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              color: Colors
+                                                                  .black26)),
+                                                ],
                                               )
                                             : Container(),
                                       ),
                                     ),
+                                    SizedBox(
+                                      height: 10.0,
+                                    )
                                   ],
                                 ),
                               ),

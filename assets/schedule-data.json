@@ -204,7 +204,7 @@
           "sessions": [
             {
               "items": [
-                "coffeebreak"
+                "nomoredataavailableforthisdate"
               ],
               "extendRight": 12
             }
@@ -1747,6 +1747,10 @@
     },
     "lunchbreak": {
       "title": "LUNCH BREAK",
+      "description": ""
+    },
+    "nomoredataavailableforthisdate": {
+      "title": "NO MORE DATA AVAILABLE",
       "description": ""
     }
   },

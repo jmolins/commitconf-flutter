@@ -1,1 +1,1 @@
-const kDividerSlotHeight = 50.0;
+const kDividerSlotHeight = 60.0;
