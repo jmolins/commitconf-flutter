@@ -1,6 +1,6 @@
-# commitconf
+# Commit
 
-CommitConf companion app
+Unofficial Commit companion app
 
 ## Getting Started
 
