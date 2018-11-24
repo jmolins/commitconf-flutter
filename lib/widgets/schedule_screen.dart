@@ -52,6 +52,38 @@ class ScheduleScreenState extends State<ScheduleScreen> {
     super.dispose();
   }
 
+  _showDialog(BuildContext context) {
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                SizedBox(
+                  height: 25.0,
+                ),
+                Text("Built with Flutter",
+                    style: TextStyle(fontWeight: FontWeight.bold)),
+                SizedBox(
+                  height: 25.0,
+                ),
+                Text("by Chema Molins"),
+                Text("@jmolins"),
+              ],
+            ),
+            actions: <Widget>[
+              new FlatButton(
+                child: new Text("OK"),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,6 +118,7 @@ class ScheduleScreenState extends State<ScheduleScreen> {
               ),
             ),
           ),
+          SizedBox(width: 8.0),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: InkWell(
@@ -106,7 +139,14 @@ class ScheduleScreenState extends State<ScheduleScreen> {
               ),
             ),
           ),
-          SizedBox(width: 15.0)
+          SizedBox(width: 3.0),
+          IconButton(
+            icon: Icon(Icons.info),
+            color: Colors.black54,
+            onPressed: () {
+              _showDialog(context);
+            },
+          ),
         ],
       ),
       body: _schedule == null
