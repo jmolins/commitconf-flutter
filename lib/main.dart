@@ -23,7 +23,7 @@ class MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    bloc.loadScheduleFromNetwork();
+    //bloc.loadScheduleFromNetwork();
   }
 
   @override

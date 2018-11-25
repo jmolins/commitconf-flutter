@@ -29,7 +29,8 @@ class ScheduleScreenState extends State<ScheduleScreen> {
   @override
   void initState() {
     super.initState();
-    //loadScheduleFromLocal();
+    // Load file from here as the context allows us to access the Asset bundle
+    loadScheduleFromLocal();
     _subscription = widget.bloc.schedule.listen((schedule) {
       setState(() {
         _schedule = schedule;
@@ -40,9 +41,6 @@ class ScheduleScreenState extends State<ScheduleScreen> {
   void loadScheduleFromLocal() {
     getSchedule(context).then((schedule) {
       widget.bloc.setSchedule(schedule);
-      print("Loaded from local");
-    }).then((_) {
-      //loadScheduleFromNetwork();
     });
   }
 
@@ -93,6 +91,7 @@ class ScheduleScreenState extends State<ScheduleScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        brightness: Brightness.light,
         elevation: 0.0,
         leading: Padding(
           padding: EdgeInsets.only(top: 8.0, left: 8.0, bottom: 8.0),
