@@ -204,7 +204,393 @@
           "sessions": [
             {
               "items": [
-                "nomoredataavailableforthisdate"
+                "coffeebreak"
+              ],
+              "extendRight": 12
+            }
+          ],
+          "type": "divider"
+        },
+        {
+          "startTime": "12:45",
+          "endTime": "13:30",
+          "sessions": [
+            {
+              "items": [
+                "recomendacionsegu"
+              ]
+            },
+            {
+              "items": [
+                "kubeflowtensor"
+              ]
+            },
+            {
+              "items": [
+                "hotelbeds"
+              ]
+            },
+            {
+              "items": [
+                "realtimegraphql"
+              ]
+            },
+            {
+              "items": [
+                "denetapython"
+              ]
+            },
+            {
+              "items": [
+                "puppeteer"
+              ]
+            },
+            {
+              "items": [
+                "smartgraph"
+              ]
+            },
+            {
+              "items": [
+                "programaparalela"
+              ]
+            },
+            {
+              "items": [
+                "busquedasapoyadas"
+              ]
+            },
+            {
+              "items": [
+                "pwaenaccion"
+              ],
+              "extendDown": 2
+            },
+            {
+              "items": [
+                "apigprc"
+              ],
+              "extendDown": 2
+            },
+            {
+              "items": [
+                "evoarchitecture"
+              ],
+              "extendDown": 2
+            }
+          ]
+        },
+        {
+          "startTime": "13:45",
+          "endTime": "14:30",
+          "sessions": [
+            {
+              "items": [
+                "gestionarplani"
+              ]
+            },
+            {
+              "items": [
+                "esenciawebcom"
+              ]
+            },
+            {
+              "items": [
+                "monolithfighter"
+              ]
+            },
+            {
+              "items": [
+                "tensorflowjs"
+              ]
+            },
+            {
+              "items": [
+                "machinelearopti"
+              ]
+            },
+            {
+              "items": [
+                "visudatosd3"
+              ]
+            },
+            {
+              "items": [
+                "hombreluna"
+              ]
+            },
+            {
+              "items": [
+                "canvasworkers"
+              ]
+            },
+            {
+              "items": [
+                "mixingswift"
+              ]
+            }
+          ]
+        },
+        {
+          "startTime": "14:30",
+          "endTime": "16:00",
+          "sessions": [
+            {
+              "items": [
+                "lunchbreak"
+              ],
+              "extendRight": 12
+            }
+          ],
+          "type": "divider"
+        },
+        {
+          "startTime": "16:00",
+          "endTime": "16:45",
+          "sessions": [
+            {
+              "items": [
+                "cleanarchitecture"
+              ]
+            },
+            {
+              "items": [
+                "cleancodepractica"
+              ]
+            },
+            {
+              "items": [
+                "microserviciosbanca"
+              ]
+            },
+            {
+              "items": [
+                "sistemaslogging"
+              ]
+            },
+            {
+              "items": [
+                "jenkinsx"
+              ]
+            },
+            {
+              "items": [
+                "autenticacionapps"
+              ]
+            },
+            {
+              "items": [
+                "perforhappiness"
+              ]
+            },
+            {
+              "items": [
+                "vimbeginner"
+              ]
+            },
+            {
+              "items": [
+                "hotelbedsdns"
+              ]
+            },
+            {
+              "items": [
+                "browserrendering"
+              ],
+              "extendDown": 2
+            },
+            {
+              "items": [
+                "libreriasbitcoin"
+              ],
+              "extendDown": 2
+            },
+            {
+              "items": [
+                "womenintech"
+              ],
+              "extendDown": 2
+            }
+          ]
+        },
+        {
+          "startTime": "17:00",
+          "endTime": "17:45",
+          "sessions": [
+            {
+              "items": [
+                "equipotrabajando"
+              ]
+            },
+            {
+              "items": [
+                "codeproduct"
+              ]
+            },
+            {
+              "items": [
+                "cicddevops"
+              ]
+            },
+            {
+              "items": [
+                "ecmascript18"
+              ]
+            },
+            {
+              "items": [
+                "100bashshell"
+              ]
+            },
+            {
+              "items": [
+                "atipicosd3"
+              ]
+            },
+            {
+              "items": [
+                "avanzadaskuber"
+              ]
+            },
+            {
+              "items": [
+                "sailinthecloud"
+              ]
+            },
+            {
+              "items": [
+                "codigoterraform"
+              ]
+            }
+          ]
+        },
+        {
+          "startTime": "18:00",
+          "endTime": "18:45",
+          "sessions": [
+            {
+              "items": [
+                "sistemareactivo"
+              ]
+            },
+            {
+              "items": [
+                "cssmantenible"
+              ]
+            },
+            {
+              "items": [
+                "progracuantica"
+              ]
+            },
+            {
+              "items": [
+                "entrevistasborde"
+              ]
+            },
+            {
+              "items": [
+                "confighumans"
+              ]
+            },
+            {
+              "items": [
+                "analisisgeospacial"
+              ]
+            },
+            {
+              "items": [
+                "arquitecturacabal"
+              ]
+            },
+            {
+              "items": [
+                "tienespaguer"
+              ]
+            },
+            {
+              "items": [
+                "entrenanube"
+              ]
+            },
+            {
+              "items": [
+                "jestenzyme"
+              ],
+              "extendDown": 2
+            },
+            {
+              "items": [
+                "ethereum"
+              ],
+              "extendDown": 2
+            },
+            {
+              "items": [
+                "codingmonkey"
+              ],
+              "extendDown": 2
+            }
+          ]
+        },
+        {
+          "startTime": "18:45",
+          "endTime": "19:30",
+          "sessions": [
+            {
+              "items": [
+                "empty"
+              ]
+            },
+            {
+              "items": [
+                "empty"
+              ]
+            },
+            {
+              "items": [
+                "empty"
+              ]
+            },
+            {
+              "items": [
+                "empty"
+              ]
+            },
+            {
+              "items": [
+                "empty"
+              ]
+            },
+            {
+              "items": [
+                "empty"
+              ]
+            },
+            {
+              "items": [
+                "empty"
+              ]
+            },
+            {
+              "items": [
+                "empty"
+              ]
+            },
+            {
+              "items": [
+                "empty"
+              ]
+            }
+          ]
+        },
+        {
+          "startTime": "19:30",
+          "endTime": "21:00",
+          "sessions": [
+            {
+              "items": [
+                "networking"
               ],
               "extendRight": 12
             }
@@ -1741,6 +2127,604 @@
         "Java;Javascript"
       ]
     },
+    "recomendacionsegu": {
+      "title": "Recomendaciones en materia de seguridad en el desarrollo de software",
+      "description": "Siempre decimos que el \"usuario\" es el eslabón más débil en la cadena de la ciber seguridad, pero también los desarrolladores son un eslabón débil y finalmente deberíamos agregar la \"debilidad\" que suman el uso de algunas tecnologías en particular, la premura y bajo coste con que la empresas acometen el desarrollo de software. Está \"mezcla explosiva\" da un resultado fatal: software inseguro y fallas reiteradas. Algo que se puede prevenir en la etapa de diseño y desarrollo, quedando fundamentalmente una fase de educación para el usuario final en cuanto prácticas más seguras en el uso de aplicaciones finales y dispositivos. La falta de una estrategia correcta termina generando la llamada \"industria del parche infinito\", el cual sabemos por experiencia, qué son más los problemas que \"agregados\" que los resueltos.\n\nIntentaremos resumir algunas consideraciones y buenas prácticas que deberían ser atendidas de un modo firme y preciso, en el cuál los diferentes actores -empresas, desarrolladores y usuarios- están implicados. Reglas básicas y mucho sentido común ayudan en este tema crucial y critico. En este terreno pretendemos aportar ideas, experiencias y concientización, por lo cual, finalmente, logremos apreciar con seriedad las cuestiones de ciber seguridad.\n\nLos millones de incidentes de seguridad ocurridos anualmente, las multimillonarias pérdidas ocasionadas, que finalmente todos sabemos quienes las terminan pagando, son más que un aliciente a encontrar criterios y métodos adecuados. Quizá, los desarrolladores, los usuarios y la empresas deberían comenzar a entender mejor las diferentes culturas del mundo \"hacking\", para así poder plantearse el problema desde su mismo origen y no confiar en la magia que pueda aportar una \"estrella\" del mundo de la ciber seguridad o las soluciones mágicas que plantean muchas corporaciones.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Security",
+        "None"
+      ]
+    },
+    "kubeflowtensor": {
+      "title": "Kubeflow: Tensorflow en Kubernetes",
+      "description": "En esta sesión revisaremos Kubeflow, con un caso práctico para que puedas entender como Kubeflow te puede ayudar a gestionar tu modelo de Machine Learning. Durante la sesión veremos el ciclo completo del modelo, la edición con Jupyter, la creación de los contenedores de entrenamiento y predicción, la gestión del un A/B testing y el uso de herramientas como Tensorboard y la modificación de los parámetros del modelo.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Cloud;Machine learning",
+        "Go;Python"
+      ]
+    },
+    "hotelbeds": {
+      "title": "Hotelbeds journey to a microservices cloud-native architecture",
+      "description": "Hotelbeds group is one of the leading bedbanks in the world, a global distributor of accommodation based in Palma de Mallorca, with an offering of more than 170.000 hotels and up to 1.500 Million request per day.\n\nIn the last two years Hotelbeds Group has undergone a profound technical transformation from an old monolythic on premise architecture to a microservices cloud-native architecture. Nowadays a big chunk of our monolyth has been transformed into java microservices deployed on cloud and we are already processing all our bookings on cloud. We have also moved to the cloud our availability engine, distributed to several locations accross the globe to be closer to the clients and reduce latencies.\n\nThis talk is about the path we followed on this fascinating journey, the decisions taken and lessons learned, as well as some insight on our future challenges.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other;Cloud",
+        "Java"
+      ]
+    },
+    "realtimegraphql": {
+      "title": "Realtime and microservices with GraphQL",
+      "description": "In the context of building APIs, GraphQL is getting a lot of attention lately, especially comparing it as an alternative to REST.\n\nIn this talk we will see the lessons learned and pitfalls of using GraphQL within a microservices architecture (with Ruby, Elixir, Javascript and React) and go beyond HTTP with an example of GraphQL Subscriptions and WebSockets.",
+      "tags": [
+        "Talk",
+        "English",
+        "Intermediate",
+        "Web",
+        "Javascript;Ruby;Other"
+      ]
+    },
+    "denetapython": {
+      "title": "De .NET a Python. ¿Dónde están mis cosas?",
+      "description": "Hace unos meses di un giro de 180º y, tras más de 8 años trabajando con .NET, he saltado a un stack muy diferente, con Python como centro del cambio. En mi día a día utilizaba multitud de herramientas a todos los niveles: patrones de diseño, librerías, frameworks, SDKs, servicios de Azure y, por supuesto, Visual Studio. Hoy, mi caja de herramientas es bien diferente, empezando con python, pip, tornado y Pycharm, entre otros. Al principio todo bien. Hago mis ejercicios de HackerRank, voy aprendiendo las diferentes estructuras de datos, convenciones, buenas prácticas, algunas librerías, etc. Pero llega el día en el que quiero hacer mi primer proyecto web desde cero. Y en ese momento me pregunto ¿Dónde están mis cosas? Me refiero a todas esas piezas a diferentes niveles, que usaba a diario y que, en un primer momento, no tengo claro cuál es su equivalente en Python o si acaso tienen sentido dentro de este stack. ¿Hay algún IDE que me facilite la vida para desarrollarlo? ¿Cómo hago debug? ¿Hay alguna herramienta de profiling? Y más allá del entorno, ¿qué capas se suelen utilizar y cómo las separo? ¿Cómo implemento la inversión de control? ¿Cuál es el equivalente de un patrón repositorio genérico? ¿Por qué necesito los entornos virtuales? ¿Qué me aporta la herencia múltiple? Y las comprehensions, ¿puedo hacer todo lo que hacía con Linq? En esta charla trataremos de enlazar los dos mundos, analizaremos pros y contras e intentaremos responder a algunas de las preguntas anteriores. Basándonos en nuestras experiencias pasadas y en, sobre todo, en las vividas juntos en TrustYou.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Web",
+        ".Net;Python"
+      ]
+    },
+    "puppeteer": {
+      "title": "Cuando los tests conocieron a Puppeteer...",
+      "description": "Cuando el testing conoció a Puppeteer, el flechazo fue instantáneo. Para los que lo conozcan, es posible que hayan oído hablar de sus grandes ventajas para temas como scrapping, pero hay use cases tan interesantes como esos más allá. Para los que no lo conozcan, introduciremos y acompañaremos con ejemplos las principales características de este Chrome Headless y la cantidad de ventajas que tendría el introducirlo en nuestras tareas de testing.\n\nHablaremos de otros posibles usos, sobre todo, los centrados en tareas de testing para asegurar la calidad del producto (como testing automático o testing multidispositivo) y en tareas de auditorías y performance para asegurar que las métricas no empeoran poquito a poquito sin darnos cuenta. Queremos compartir nuestra experiencia obtenida y las ventajas que podría aportar a muchos proyectos.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Web",
+        "Javascript"
+      ]
+    },
+    "smartgraph": {
+      "title": "Smartgraph: Analítica reactiva de grafos a gran Scala",
+      "description": "Teniendo en cuenta los nuevos avances en Big Data y Machine Learning y aprovechando las ventajas que aporta explotar la información en forma de grafo, hemos combinado diferentes tecnologías para construir un sistema de procesamiento paralelo, reactivo e inteligente sobre grafos.\n\nUtilizando el motor de procesamiento paralelo mediante actores de Akka dotamos de “vida” a cada nodo del grafo, permitiendo así que los diferentes procesos y algoritmos que se ejecutan en el sistema se recalculen de forma autónoma, mutando los datos y la estructura del grafo por sí mismo.\n\nExplicaremos los entresijos de la programación reactiva, orientada a la analítica de grafos en una infraestructura Big Data y como aplicar un modelo de Machine Learning a información estructurada en grafo.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Big data;Web;Machine learning",
+        "Scala"
+      ]
+    },
+    "programaparalela": {
+      "title": "Programación paralela para todos con C++17",
+      "description": "Con la aprobación de C++17, una de las grandes novedades va a ser la disponibilidad de algoritmos paralelos como parte de la biblioteca estándar. Esto permitirá, por ejemplo aprovechar todos los núcleos del procesador para hacer tareas como la búsqueda, la ordenación o incluso operaciones de tipo map-reduce.\n\nEn esta charla explicaré porque el paralelismo ha venido esta vez para quedarse y como podemos transformar nuestras aplicaciones (en C++) para sacar partido de los algoritmos paralelos.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Other",
+        "C++"
+      ]
+    },
+    "busquedasapoyadas": {
+      "title": "Implementando búsquedas apoyadas en Machine Learning",
+      "description": "La página de búsqueda de tu website es siempre una idea a posteriori, algo que añadimos sin dedicar suficiente cuidado. Pero la búsqueda es una funcionalidad a menudo indispensable en plataformas grandes, y hay mucha innovación que puede introducirse para prestar un servicio de mayor calidad. La búsqueda no es un valor verdadero / falso, sino que un cambio en la calidad de los resultados se traduce en un incremento de conversiones. En la búsqueda, como en el rendimiento de tu website, la calidad del resultado importa.\n\nEn Magnolia hemos invertido meses en un proyecto aplicando las últimas técnicas de ML para desplegar una red neuronal profunda que ajusta continuamente el orden de los resultados según el comportamiento del usuario. Esta herramienta incluye reconocimiento de imágenes que se ejecuta localmente sin depender de servicios externos, y un reconocimiento de voz basado exclusivamente en Web APIs modernas.\n\nLos problemas que aplican ML son inicialmente abstractos y difíciles de concretizar, pero esta charla propone un enfoque sistemático para simplificar el problema y hacerlo accesible. Veremos cómo aplicando frameworks open source y APIs estándar, la implantación de Machine Learning se ha vuelto mucho más accesible para desarrolladores que vienen de otros campos. Finalmente, abordaremos el lado práctico mostrando la integración de esta interfaz de búsqueda en un sistema de gestión de contenidos y el valor de negocio real que se crea.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Web;Machine learning",
+        "Java"
+      ]
+    },
+    "pwaenaccion": {
+      "title": "Progressive Web Apps en acción",
+      "description": "Últimamente, grandes compañías están empezando a desarrollar una PWA para su producto estrella. Las aplicaciones web progresivas están desarrolladas con HTML, CSS y JavaScript pero que se comportan como aplicaciones nativas y que no necesitan una store donde descargarse (la puedes agregar a la Home del dispositivo directamente desde la web).\n\nCon las Progressive Web Apps, un usuario no sabe que está utilizando una web, se puede compartir fácilmente (sólo con la URL) y además tiene todo el potencial de los navegadores actuales (incluso notificaciones push!!). Además de ser adaptables a cualquier dispositivo y pueden tener funcionalidad offline. ¿Todavía no estás convencido de que son el futuro?\n\nSi te interesan las aplicaciones móviles y quieres conocer las PWAs, ¡os esperamos en el taller!",
+      "tags": [
+        "Workshop",
+        "Spanish",
+        "Beginner",
+        "Mobile;Web",
+        "HTML/CSS;Javascript"
+      ]
+    },
+    "apigprc": {
+      "title": "Crea una API gRPC con Go",
+      "description": "En este taller, explicaremos ¿que es gRPC? ¿para qué utilizarlo? ¿y cuando es una buena idea usarlo? Realizaremos un microservicio usando gRPC con Go desde cero. Definiremos el microservicio usando Protocol Buffers, una herramienta de serialización binaria que generaremos un cliente y un servidor para diferentes lenguajes de programación como golang, python, java, ruby.\n\nDonde generamos nuestras librerías clientes para Python y Golang para comunicarnos con nuestro servidor. También, explicaremos cómo realizar todo el proceso de Integración continua.",
+      "tags": [
+        "Workshop",
+        "Spanish",
+        "Intermediate",
+        "Soft skills;Cloud",
+        "Go"
+      ]
+    },
+    "evoarchitecture": {
+      "title": "Evolutionary Architecture",
+      "description": "En esta sesión de open space me gustaría que los asistentes compartamos como enfocamos la arquitectura de nuestros sistemas y la adaptamos al cambio.\n\nLa industria de la tecnología está en un estado de cambio constante. Hemos aprendido a afrontar los cambios en los requisitos de negocio adoptando prácticas ágiles y desarrollando de una manera iterativa. Sin embargo, no solo el negocio cambia, sino que el ecosistema o la tecnología que usamos para implementar esos requerimientos también lo hace: nuevos lenguajes, frameworks e infraestructura a los que también debemos adaptarnos. De aquí nace la idea de pensar en la arquitectura como algo que evoluciona y que tiene que ser capaz de reaccionar al cambio de manera eficiente. Daré una pequeña introducción de este concepto y de como podemos crear tests que nos ayuden a validar dicha evolución, aprender y mejorar nuestro sistemas.",
+      "tags": [
+        "Unconference",
+        "Spanish",
+        "Intermediate",
+        "Agile and Lean;Devops;Security;Cloud;Web",
+        "None"
+      ]
+    },
+    "gestionarplani": {
+      "title": "Gestionar una planificación sin necesidad de usar una bola de cristal",
+      "description": "Si, soy jefe de proyecto agile, si ayudo a mis equipos a mejorar de forma continua y como parte de mis responsabilidades está gestionar la planificación del equipo y no, aún no me he comprado una bola de cristal. No hay magia detrás de los números, simplemente matemáticas. ¿Cuántos datos tenemos del desempeño de un equipo? si hemos utilizado una herramienta o varias para gestionar su trabajo, tenemos información suficiente. ¿Le estamos sacando todo el partido a esos datos? Probablemente no. Una vez escuche que para dar una estimación hay que dar un rango de tiempo y una probabilidad, en general, esto es poco frecuente, llegamos a estimar por horas o por días, como si la incertidumbre no existiese. Alguna vez te han preguntado ¿para cuando va a estar esta funcionalidad y has querido salir corriendo? a mí, me ha pasado. En esta charla veremos como contestar esa pregunta basándonos en los datos, para traer predictibilidad a los equipos, usando herramientas como el control flow chart o datos como el cycle time de las historias.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "advanced",
+        "Agile and Lean",
+        "None"
+      ]
+    },
+    "esenciawebcom": {
+      "title": "Esencia de WebComponents",
+      "description": "Web Components es una tecnología que gracias a la W3C pronto tendremos en todos los navegadores de modo neutral y estándar. De modo nativo, sin recurrir a frameworks, permite compartimentar presentación y funcionalidad facilitando el reuso de las piezas en diversas aplicaciones. En esta charla repasaremos:\nque necesitamos para empezar a trabajar con Web Components,\n\nque soporte tenemos en navegadores,\ny como los frameworks más populares están reorientando su enfoque para sacarles todo el partido.\n\nCon la aparición de catálogos de componentes listos para ser utilizados en nuestras aplicaciones, dentro de muy poco podremos crear aplicaciones importando componentes propios o de terceros sin importar el framework con el que fueron creados. Como ejemplo de herramienta presentaremos Quid que nos permite prototipar y componer Web Components.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Web",
+        "HTML/CSS;Javascript;Other"
+      ]
+    },
+    "monolithfighter": {
+      "title": "Monolith Fighter",
+      "description": "A la derecha del cuadrilátero : Mi app monolita Ahí están, ahí siguen, toda organización con al menos 10 años de vida tiene una. Monolitos: Aplicaciones donde viven las lógicas de negocio más complejas, intrincadas e indocumentadas.\n\nA la izquierda del cuadrilátero : Las modas tecnológicas Periodicamente aparecen nuevas tecnologías (frameworks, soluciones...) con la promesa de ser la tecnología DEFINITVA, la que resolverá los problemas que tenemos en el dia a dia. Y en cuanto sale todo el mundo habla de ella y todo el mundo quiere utilizarla. Da igual si sirve o no, si resolverá un problema o nos dará más problemas, La moda es la moda y todo el mundo, técnicos proveedores y departamentos de IT quieren estar a la última.\n\nEn esta sesión explicaremos algunas de las ultimas modas (microservicios, contenedores, ...) desde el punto de vista de pasar migrar una aplicación monolita para llevarla al siglo XXIs, veremos como lo podemos hacer, que debemos tener en cuenta, y lo haremos contando una histroria real, desde que el primer contacto hasta el resultado que final obtenido Si quieres conocer la historia, y lo más importante su final, no te pierdas esta sesión",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Agile and Lean;Cloud",
+        ".Net"
+      ]
+    },
+    "tensorflowjs": {
+      "title": "TensorFlow.js: FullStack Machine Learning",
+      "description": "TensorFlow ha conseguido acercar Machine Learning a profesionales y entusiastas de la tecnología en todo el mundo sin necesidad de ser un experto en Data Science.\n\nSin embargo, hasta hace poco, estábamos limitados a usarlo en el servidor y programar en Python, Java o C++. Pero ahora eso ha cambiado. Gracias a TensorFlow.js podemos emplear esta librería para entrenar o utilizar nuestros modelos tanto en cliente como en servidor y siempre en Javascript.\n\nEn esta charla realizaremos una introducción al mundo de Machine Learning y de TensorFlow y enseñaremos ejemplos de cómo podemos utilizarlo en nuestras aplicaciones para que al terminar estéis deseando llegar a casa para probarlo.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other;Web",
+        "Javascript"
+      ]
+    },
+    "machinelearopti": {
+      "title": "Machine Learning para optimizar imágenes",
+      "description": "Como profesionales del desarrollo web, nos procupamos de las buenas prácticas en Javascript y CSS, de la semántica en HTML, de la accesibilidad de nuestro contenido, pero ¿qué pasa con la imágenes?\n\nLas imágenes representan hasta el 60% del contenido de los sites, desde julio de 2017 en un site promedio de 3.0Mb, 1.7Mb son imágenes.\n\nAhora que sabemos que deberíamos dedicar tiempo a optimizar las imágenes, veamos los diferentes niveles de optimización, cómo automatizarlos y cómo con la ayuda del Machine Learning conseguir reducir un 15-17% el peso de algunas imágenes.\n\nEn esta charla veremos herramientas para el análisis de las imágenes, la optimización, la validación (aka Tests) y cómo reducir el peso de alguna imágenes con la ayuda del reconocimiento de objetos con Machine Learning.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Mobile;Web",
+        "C/C++;Javascript;Bash;Python"
+      ]
+    },
+    "visudatosd3": {
+      "title": "Visualizaciones de datos en tiempo real con D3 y Firebase",
+      "description": "Descripción\n\nHoy por hoy Big Data es una rama muy importante en nuestro mundo, y puede aportar información relevante que no se puede obtener por otros métodos. Pero para la explotación de estos datos por parte de usuarios no especializados, las visualizaciones se convierten en una herramienta muy importante. En esta charla, veremos como construir sistemas de visualizaciones, utilizando datos recogidos en tiempo real durante la charla. y construir gráficos basados en las preguntas de los asistentes por medio de un sistema de Firebase + D3\n\nQue veremos\n\nEn que nos ayudan los datos\nComo nos ayudan las visualizaciones\nComo funciona D3 y algunos ejemplos\nComo utilizar Firebase para mantener actualizadas nuestras visualizaciones\nInteracciones en tiempo real y como afectan",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Big data;Cloud;Web",
+        "HTML/CSS;Javascript"
+      ]
+    },
+    "hombreluna": {
+      "title": "El hombre pisó la luna, pero gracias a la mujer",
+      "description": "La mujer ha quedado siempre olvidada en los libros de historia, ciencia, arte o literatura; ha quedado oculta para el conocimiento popular. En la rama de la tecnología esto no ha sido diferente, y la tecnología se ha entendido como \"cosa de hombres\" ¡Nada más lejos de la realidad! Os voy a enseñar cómo la tecnología no sería lo que es sin la crucial aportación de mujeres. Os voy a explicar porqué las primeras programadoras de la historia eran mujeres y ahora en cambio somos tan pocas. Porque todo tiene un porqué y porque no podemos seguir ignorando este problema. Tenemos que hacer algo ¡Y podemos hacerlo!",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Other",
+        "Other"
+      ]
+    },
+    "canvasworkers": {
+      "title": "Canvas + Workers. Gráficas que no matan. Sí, esto es JavaScript sin cosas raras.",
+      "description": "¿Por qué esta charla?\n\nEs verdad que en materia de CSS se ha dotado de una potencia de expresividad gráfica increíble a la Web. Pero aún sigue siendo complejo y lento desarrollar gráficas avanzadas que no tengan un alto impacto en el rendimiento de las aplicaciones Web, especialmente en las Single Page.\n\nEn esta charla de 40 minutos (o menos) veremos:\n\nUna introducción a las gráficas avanzadas en la Web (Canvas + JavaScript).\nBuenas prácticas y los fundamentos para acelerar el rendimiento de las gráficas con canvas.\nEl uso de OffscreenCanvas mediante un ejemplo práctico con Workers de paralelización de las tareas de pintado.\n\nEn general; un buen repaso de creación de gráficas complejas para la Web.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Advanced",
+        "Web",
+        "Javascript"
+      ]
+    },
+    "mixingswift": {
+      "title": "Mixing Swift Frameworks and Dependency Injection",
+      "description": "Maintaining a big codebase during an extended period is always tricky, especially in app environments. Products evolve, companies pivot, vendors modify their SDK, new design patterns emerge and die... you can even decide to change the programming language!\n\nThe Tuenti iOS app has suffered a good chunk of changes. In the short term, this app will be at the center of Telefonica digitization, serving dozens of millions of Movistar, O2 and Vivo customers.\n\nHow do you prepare a legacy codebase for this? First, let’s continue migrating a massive Objective-C codebase to Swift. Modularize and isolate its components using frameworks. Test as much as possible to avoid costly regressions. And finally, design the glue that holds everything together.\n\nCome to this session if you want to learn from our experience!",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Mobile",
+        "Objective-C;Swift"
+      ]
+    },
+    "cleanarchitecture": {
+      "title": "When Clean Architecture met Kotlin: A love story",
+      "description": "Kotlin, un lenguaje moderno irrumpe en la comunidad cuando los desarrolladores llevan años perfeccionando lo que ellos llaman Clean Architecture, unas pócimas y conjuros con los que aumentar el poder de la testabilidad e independizarse de los malignos agentes externos y crueles frameworks.\n\nMientras grandes grupos comienzan a alabar las bonanzas de las lambdas, funciones de extensión, tratamiento de nulos y otros cantos de sirena, este lenguaje tendrá que luchar para demostrar que no es sólo una sintaxis bonita y promesas de verano, sino que ha llegado para llevar a Clean Architecture a un nuevo nivel.\n\nCorutinas, tipos polimórficos, funciones de alto orden, pattern matching y otras muchas ideas y soluciones son las que Kotlin nos ofrece, y nosotros las repasaremos para ver cómo utilizarlas y continuar teniendo una Clean Architecture.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other",
+        "Java;Kotlin;Other"
+      ]
+    },
+    "cleancodepractica": {
+      "title": "Clean code en la práctica",
+      "description": "¿No entiendes ni jota del código que tú mismo escribiste hace sólo un par de meses? ¿No paras de escuchar \"WTF\" cuando otras personas tienen que tocar tu código? ¿Añadir una nueva feature se vuelve misión imposible por toda la deuda técnica acumulada? ¿Te da miedito tocar casi cualquier línea por si peta todo? Tranquilo, todos nos hemos encontrado y hemos escrito muchas veces código \"de mala calidad\". En esta charla daré consejos prácticos basados en la experiencia para intentar hacer nuestro código un poco más manejable.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Agile and Lean;Soft skills",
+        "Python;Other"
+      ]
+    },
+    "microserviciosbanca": {
+      "title": "Una experiencia con microservicios en banca",
+      "description": "El sector bancario no ha podido permanecer ajeno a los cambios sociales, económicos y tecnológicos que han dado lugar a nuevas regulaciones como GDPR y PSD2.\n\nEsta charla presenta un caso real de un nuevo banco digital basado en los principios de entregar el máximo valor en el menor tiempo posible, centrarse en el cliente y no sacrificar la calidad.\n\nSe ha promovido una cultura de calidad y compromiso y se ha dividido el sistema, los equipos y los procesos en partes independientes.\n\nEl objetivo, la autonomía a todos los niveles.\n\nY la manera en que se han realizado estas divisiones se ha basado en metodologías ágiles, DevOps, microservicios y pruebas automáticas.\n\nA lo largo de la charla se expondrán las decisiones que se han tomado en estas materias y cuáles han sido los resultados.\n\nPor último, se verá cuales son las próximas acciones y planes para seguir mejorando.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other;Devops",
+        "Java"
+      ]
+    },
+    "sistemaslogging": {
+      "title": "4 sistemas de logging y métricas en 40 minutos",
+      "description": "En 40 minutos introduciré 4 sistemas de logging y métricas para que pruebes una cucharada para cada uno de ellos y descubras cuál incorporar a tu próximo proyecto.\n\nAprovecha tu tiempo y saborea este resumen sobre sus características, cómo se despliegan y las ventajas e inconvenientes de cada uno de ellos. En principio el menú incluye Elasticsearch & friends, Sensu, InfluxDB & friends y Prometheus, aunque los platos pueden variar según productos de temporada. ¡Bon apetit!",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other;Devops",
+        "Other"
+      ]
+    },
+    "jenkinsx": {
+      "title": "Jenkins X: Continuous Delivery for Kubernetes",
+      "description": "Jenkins X is a new open source CI/CD platform for Kubernetes based on Jenkins.\n\nJenkins X runs on Kubernetes and transparently uses on demand containers to run build agents and jobs, and isolate job execution. It enables CI/CD-as-code using Jenkins Pipelines and automated deployments of commits and pull requests using Skaffold, Helm and other popular tools. We will demo how to use Jenkins X on any Kubernetes cluster for fully automated CI and CD using a GitOps approach",
+      "tags": [
+        "Talk",
+        "English",
+        "Intermediate",
+        "Devops;Cloud",
+        "Java;Go;Other"
+      ]
+    },
+    "autenticacionapps": {
+      "title": "Autenticación en nuestras Apps, fácil sencillo y para toda la familia.",
+      "description": "En esta charla vamos a ver cómo autenticar y autorizar usuarios en nuestras aplicaciones no tiene por qué ser difícil si usamos las herramientas adecuadas. Usando el protocolo OpenId Connect y una de sus implementaciones para dotnet veremos ejemplos de autenticación con usuarios locales, de Active Directory u otros provedores como cuentas Microsoft, Google o LinkdedIn. Como extra añadiremos un segundo factor de autenticación para un extra de seguridad. Todos los ejemplos de código los haremos en dotnet core para estar como siempre a la última.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Security;Web",
+        ".Net"
+      ]
+    },
+    "perforhappiness": {
+      "title": "Performance is happiness",
+      "description": "Ahora que podemos acceder a internet desde cualquier punto, uno de los parámetros para que el usuario se \"fidelice\" a un servicio web o móvil es la usabilidad incluyendo la rapidez. Cómo podemos vender nuestro proyecto de performance? Cómo podemos convencer a los stakeholders sobre la necesidad de pruebas de rendimiento? Daremos respuesta a estas respuestas usando una herramienta libre llamada WebPageTest explicando cómo hacer unas pruebas mínimas de rendimiento para asegurarnos la satisfacción del usuario y cómo poder compararnos con la competencia.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Mobile;Web",
+        "Javascript"
+      ]
+    },
+    "vimbeginner": {
+      "title": "Vim from a begginer/junior/hypster/dummy web developer",
+      "description": "Why VIM\n\nMi inquietud con Vim comenzó el año pasado en el JSDay asistiendo al taller de Substack. Cuando todos estabamos listos empezó a aporrear el teclado a una velocidad y escupiendo código de una manera que a los 5 minutos empezó a sonar el run run de portatiles cerrandose progresivamente.\n\nA partir de entonces me puse a investigar, leer articulos, hacer tutoriales, videos... al principio me pareció una locura pero poco a poco te vas dando cuenta del potencial que tiene programar programando con Vim.\n\nCon esta charla pretendo hacer una introducción a Vim, mostrar su potencial a la hora de escribir código de manera más eficiente y, por supuesto, todo lo que me habría gustado que me contasen cuando empecé a intentar usarlo 😃 .\n\nTambién compartiré algunas propuestas y configuraciónes para utilizarlo desarrollando apps con JS, plugins de sintaxis, linters, etc\n\nSi sientes curiosidad por Vim, estás empezando con ello, o simplemente no sabes cerrarlo sin apagar el ordenador no dudes en venir!",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Soft skills;Web",
+        "Javascript;Bash"
+      ]
+    },
+    "hotelbedsdns": {
+      "title": "How Hotelbeds uses advanced DNS capabilities to globally distribute their online platform",
+      "description": "Hotelbeds is one of the leading bedbanks in the world, a global distributor of accommodation based in Palma de Mallorca, with an offering of more than 170.000 hotels and up to 2.000 Million requests per day.\n\nIn the last two years Hotelbeds Group has undergone a profound technical transformation from an old monolythic on premise architecture to a microservices cloud-native architecture. Nowadays a big chunk of our monolyth has been transformed into java microservices deployed in the cloud along with our availability engine, distributed to several locations across the globe to be closer to the clients and reduce latencies.\n\nThis talk is about how Hotelbeds leverages advanced DNS capabilities in order to globally distribute their platform. After giving an overview of the technological evolution during the past years, we will revisit what DNS is, starting with its basic capabilities and ending up explaining how the latest features of advanced DNS services can be used to distribute your platform globally plus some lessons learned and a glimpse into our future challenges.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Other;Cloud",
+        "None"
+      ]
+    },
+    "browserrendering": {
+      "title": "Browser Rendering Optimization",
+      "description": "El objetivo de este taller es familiarizarse con la pestaña \"Performance\" de las Chrome DevTools, y aprender algunos conceptos clave que afectan al rendimiento y a la experiencia de usuario en el navegador.\n\nNos basaremos en los ejemplos prácticos del MOOC \"Browser Rendering Optimization\" de Google en Udacity, que están escritos en Vanilla JavaScript: ej 1, ej 2 y ej 3.\n\nQué aprenderemos\n\nDetalles sobre el flujo de renderizado que se sigue el navegador\nComo usar eficazmente los estados/ciclos de vida de la aplicación\nConceptos como: Force Synchronous Layout, estrategias CSS, ...\nHerramientas como: requestAnimationFrame, Web Workers, will-change, ...\netc",
+      "tags": [
+        "Workshop",
+        "Spanish",
+        "Advanced",
+        "Web",
+        "HTML/CSS;Javascript"
+      ]
+    },
+    "libreriasbitcoin": {
+      "title": "Introducción al uso de librerías y exploradores de Blockchain para Bitcoin y otras criptomonedas",
+      "description": "En este taller se van revisar diversos exploradores de nodos para las principales criptomonedas, así como las librerías que ponen a disposición de los desarrolladores y todos aquellos interesados en acceder, mediante programación, a la información almacenada en las correspondientes cadenas de bloques de criptomonedas como Bitcoin, Ethereum y otras. También se hará uso de nodos de test (Test Nodes), sobre los cuales realizar transacciones ficticias, aunque idénticas a las originales, independientemente de la cadena principal y sin ningún coste.\n\nLos asistentes que quieran participar activamente necesitarán un portátil con acceso a Internet y en su caso, herramientas de desarrollo para poder trabajar con las librerías en los distintos lenguajes disponibles, que van desde Javascript a C/C++, Python, Java, PHP, etc.",
+      "tags": [
+        "Workshop",
+        "Spanish",
+        "Beginner",
+        "Soft skills;Web;Blockchain",
+        "Java;C/C++;HTML/CSS/Javascript/PHP/Python"
+      ]
+    },
+    "womenintech": {
+      "title": "Desenmascarando las *women in tech* - como conciliamos nuestra vida profesional con la personal",
+      "description": "¿Es posible llevar una vida saludable, disfrutar de tu trabajo, seguir mejorando profesionalmente y sacarle el máximo beneficio a tu tiempo libre mientras disfrutas de lo que realmente es importante para ti? ¿Te preguntas cómo se organizan tus compañeras techies para llegar a todo? ¿Has dado con la clave para llegar a un equilibrio entre trabajo + vida privada y te apetece compartirlo? ¿Te preguntas como se lo hace el resto de tu equipo para hacer todos los cursos de coursera mientras tu apenas has podido sacar tiempo para mirar ese en el que llevas 4 meses apuntada y no has avanzado ni un 10%? Queremos hablar y compartir sobre pequeños trucos, consejos, experiencias que nos ayudan en nuestro día a día y estamos seguras que tu también puedes aportar mucho!",
+      "tags": [
+        "Unconference",
+        "Spanish",
+        "Beginner",
+        "Soft skills;Other",
+        "None"
+      ]
+    },
+    "equipotrabajando": {
+      "title": "Hacer equipo trabajando en remoto",
+      "description": "¿Es posible hacer equipo trabajando en remoto?\n\nDesde hace algunos meses ha cambiado mi forma de trabajar, de la forma clásica de ir a diario a la oficina y quedarme algún día en remoto (o el típico “¡los miércoles teletrabajo!”) a quedarme trabajando en remoto e ir a la oficina en casos muy puntuales y necesarios. Es lo llamado remote first y cada vez es una práctica más extendida en ciertos ámbitos como puede ser el desarrollo de software gracias a los avances de la tecnología y la facilidad que tenemos para desarrollar nuestro trabajo en cualquier sitio con las únicas herramientas de un portátil y una conexión a internet.\n\nUna de las muchas excusas que nos ponen o nos ponemos a nosotros mismos para no trabajar en remoto es que es imposible hacer equipo o cultura de empresa trabajando lejos del resto de compañeros.\n\nEn esta charla quiero explicar mi experiencia y demostrar que esto no es así y dar unas pautas muy simples para conseguir hacer equipo igual o mejor que de forma presencial.\n\nYa seas tú el que trabaja en remoto, todo tu equipo, otro compañero o tus empleados, hay que tener claros unos conceptos para que más que afectar negativamente esta forma de trabajar, sea una mejora en la productividad, comunicación y ejecución.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Agile and Lean;Soft skills;Other",
+        "None"
+      ]
+    },
+    "codeproduct": {
+      "title": "Code as a product",
+      "description": "When we talk about software products we tend to think on websites, mobile apps, infrastructure services... but code is another product.\n\nIn CARTO we bring a platform to our customers to build Location Intelligence apps. Among our product offering, we have libraries that leverage our platform and are used by other developers to create solution to their problems.\n\nIn this talk we want to talk about code as a product. How we approach building libraries. How we tackle the lifetime of versions. How we gather feedback from our customers to build something useful for them. How we screw up sometimes. What the process to publish libraries is. What the onboarding for developers differs from a regular product.\n\nThis talk will be presented by Elena Torro, frontend developer, and Ivan Malagon, frontend lead, both working at CARTO. The chosen language is english.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Agile and Lean;Soft skills;Web",
+        "Javascript"
+      ]
+    },
+    "cicddevops": {
+      "title": "CI/CD en entornos DevOps",
+      "description": "CI/CD y DevOps son palabras de moda que escuchamos frecuentemente, ponerlas en la misma frase conlleva muchas más implicaciones de las que a priori pueda parecer.\n\nLa manera en la que desarrollamos software ha cambiado radicalmente en los últimos años, los paradigmas que se utilizaban hace 10 años han quedado desfasados. Microservicios, API First, Cloud Native son palabras que nos vienen a la mente cada vez que pensamos en la arquitectura de un nuevo desarrollo, y para hacerlo, pensamos en equipos Agile y DevOps.\n\n¿Podríamos aplicar estas técnicas también a nuestra infraestructura?\n\n¿Que implicaría esto para una compañía cómo adidas?\n\nIndependencia vs Control\n\nHablaremos de los PROS y los CONTRAS y mostraremos nuestra aproximación implementando Jenkins as a Service.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Devops;Cloud",
+        "None"
+      ]
+    },
+    "ecmascript18": {
+      "title": "ECMAScript 2018 y más allá",
+      "description": "ECMAScript 2018 o simplemente ES2018, es la última revisión de nuestro lenguaje favorito y ha llegado con interesantes novedades que, sin lugar a dudas, cambiarán la forma en la que trabajaremos con el lenguaje en los próximos años. A lo largo de la charla veremos, no solo las novedades incluidas en la especificación ES2018 si no que echaremos un vistazo a las propuestas de la próxima especificación ES2019. Una mirada al futuro de JavaScript.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Web",
+        "Javascript"
+      ]
+    },
+    "100bashshell": {
+      "title": "De 0 a 100 con Bash Shell Scripting y AWK",
+      "description": "Desde que empecé con Linux hace años, la consola, los scripts y yo nos hemos ido conociendo poco a poco hasta que ha surgido una bonita amistad. Hoy, en cuanto me surge la oportunidad juego con ellos para automatizar casi cualquier cosa de mi sistema operativo.\n\nEn esta charla quiero enseñar a programar scripts de Bash desde cero e ir subiendo la complejidad para terminar con AWK.\n\nOriginalmente es un taller que presenté en el t3chfest y que tuvo muy buena acogida, y que para el CommitConf he reducido y reestructurado como charla para que los que vengáis aprendáis los conceptos básicos de Bash Shell Scripting y de AWK.\n\nRepositorio: https://github.com/asanzdiego/commit-conf-charla-shell-script-y-awk",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Other;Devops",
+        "Bash"
+      ]
+    },
+    "atipicosd3": {
+      "title": "Diagramas atípicos con d3.js avanzado",
+      "description": "Controlar los fundamentos del API de d3 es una forma de abrir las puertas a la experimentación, pero esto constituye sólo un primer paso a la hora de encontrar la mejor forma de ilustrar tus datos de la forma que mejor se aplique a tu caso.\n\nEn esta charla veremos casos no tan típicos de representación de información y cómo llevarlos a cabo con d3.js empleando diagramas sankey, likert ,cicle packing y chord. Si crees que todo lo que tiene el mundo son diagramas de barras y líneas, o si buscas inspiración para los datos que te va a tocar representar, esta charla es para ti.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Advanced",
+        "Web",
+        "Javascript"
+      ]
+    },
+    "avanzadaskuber": {
+      "title": "Técnicas avanzadas de Scheduling con Kubernetes o como ser dueño de la orquestación en tu cluster",
+      "description": "Kubernetes hace un buen trabajo a la hora de planificar y distribuir tus cargas de trabajo entre todos los nodos de tu cluster, pero en ciertos escenarios, la (des) configuración por defecto puede producir resultados no óptimos. En esta charla repasaremos las APIs que nos ofrece Kubernetes para este propósito y veremos unos cuantos ejemplos reales donde aplicarlo, tanto para cargas de trabajo stateless como balanceados y backends, o cargas stateful como clusters de bases de datos y colas de mensajes.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Devops;Cloud",
+        "None"
+      ]
+    },
+    "sailinthecloud": {
+      "title": "Sail in the Cloud - Intro to Istio",
+      "description": "Microservices architecture has changed how companies develop and deploy applications. This change has affected testing process as well. New techniques have emerged and others have been enhanced. Does your organization wish to achieve unicorn like speed? With N deploys per day? Or a lead time (time to business value from idea to production) measured in days/weeks instead of months/years? In this session, we will not only describe how to use Istio and Kubernetes but actively demonstrate 3 specific techniques that you can use immediately following the session.\n\nCurrently, Istio is gaining a lot of traction as service-mesh implementation for Kubernetes. In this session, we are going to explore how to install Istio, and how to use it to release new versions of our services correctly.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Agile and Lean;Cloud",
+        "Java"
+      ]
+    },
+    "codigoterraform": {
+      "title": "Infraestructura como código con Terraform",
+      "description": "Crear la infraestructura necesaria para desplegar tu aplicación en producción no debería ser un proceso lento y doloroso.\n\nCon terraform, podemos definir nuestra infraestructura como código, y automatizar la creación y operación sobre todos nuestros entornos. Podremos definir en qué estado deseamos que se encuentre nuestra infraestructura y terraform se ocupará de los pasos para conseguirlo. Además, usando git para almacenar nuestras definiciones podremos aplicar los flujos de git habituales en el desarrollo, y conseguiremos que nuestra infraestructura sea consistente y replicable.\n\nCódigo de la demo: https://github.com/amardomingo/commitconf-iac-demo/",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginer",
+        "Devops;Cloud",
+        "None"
+      ]
+    },
+    "sistemareactivo": {
+      "title": "Conoce el sistema reactivo de Vue.js",
+      "description": "Vue.js lleva pegando fuerte últimamente gracias a su rápida curva de aprendizaje, los single file components, sistema de templates, framework progesivo, etc...\n\nY uno de sus principales fuertes es su sistema reactivo el cual nos permite escalar nuestra aplicación manipulando los datos a nuestro antojo sin tener que preocuparnos de cuando actualizarlos pero... ¿cómo funciona? ¿cómo logra Vue darse cuenta de que un dato ha cambiado en lo mas remoto de un array y actualizarnos \"automágicamente\" los valores que dependan de él? ¿tiene límites este sistema?\n\nEn esta charla veremos cual es la \"magia\" detrás de esto y a través de un ejemplo práctico con unas pocas lineas de JS imitar esta gran idea de llevar la reactividad a lo mas profundo de nuestro desarrollo.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Web",
+        "Javascript"
+      ]
+    },
+    "cssmantenible": {
+      "title": "CSS mantenible y escalable: fracasos, más fracasos y algún éxito",
+      "description": "A ver, se puede escribir un CSS mantenible y escalable. ¡En serio! Pero a diferencia de lo que pasa con otros lenguajes de programación(?), las buenas prácticas en CSS brillan por su ausencia.\n\nSi a esto le sumas el contexto de una agencia digital, donde cambiamos de proyecto cada dos por tres, puedes imaginarte el drama.\n\nEn esta charla voy a compartir lo que he aprendido sobre reusabilidad, escalabilidad y mantenibilidad (¿es una palabra?) después de 10 años escribiendo CSS. Lo que no nos ha funcionado, lo que nos sigue sin funcionar y lo que nos ha funcionado un poquito. Por ahora.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Mobile;Web",
+        "HTML/CSS"
+      ]
+    },
+    "progracuantica": {
+      "title": "Introducción la programación cuántica",
+      "description": "El objetivo de la charla es presentar, para una audiencia que viene principalmente del mundo de la programación y no de la física, cuáles son los principios de la computación cuántica. La revolución tecnológica que supone manipular la información a nivel subatómico viene acompañada de un cambio de paradigma en la forma de construir software. Para ilustrar los conceptos nos apoyaremos en el lenguaje de programación Q# de Microsoft.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginer",
+        "Other",
+        "Other"
+      ]
+    },
+    "entrevistasborde": {
+      "title": "Entrevistas al borde de un ataque de nervios",
+      "description": "Hoy por hoy encontrar trabajo como desarrollador(a) o persona técnica es relativamente sencillo. Pero si buscamos trabajar para empresas como Google, Facebook, Netflix u otras empresas y Startups que comercializan productos open-source... ya no lo es tanto. Primero te tienen que contactar para darte una oportunidad, y después hay que pasar una serie de entrevistas técnicas... ¡al borde de un ataque de nervios!\n\nSi buscas consejos concretos, y basados en experiencias reales, para crear y obtener nuevas oportunidades profesionales interesantes, ¡esta es tu charla!",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Soft skills;Other",
+        "None"
+      ]
+    },
+    "confighumans": {
+      "title": "PostgreSQL Configuration for Humans",
+      "description": "PostgreSQL is the world’s most advanced open source database. Indeed! With around 270 configuration parameters in postgresql.conf, plus all the knobs in pg_hba.conf, it is definitely ADVANCED!\n\nHow many parameters do you tune? 1? 8? 32? Anyone ever tuned more than 64?\n\nNo tuning means below par performance. But how to start? Which parameters to tune? What are the appropriate values? Is there a tool --not just an editor like vim or emacs-- to help users manage the 700-line postgresql.conf file?\n\nJoin this talk to understand the performance advantages of appropriately tuning your postgresql.conf file, showcase a new free tool to make PostgreSQL configuration possible for HUMANS, and learn the best practices for tuning several relevant postgresql.conf parameters.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "SQL and NOSQL",
+        "Other"
+      ]
+    },
+    "analisisgeospacial": {
+      "title": "Análisis geoespacial : Descubre qué patrones de información hay a través de los mapas",
+      "description": "Hemos percibido los mapas casi siempre como una herramienta para orientarnos en el espacio. Pero quizás no sepas que son una herramienta muy útil y potente para hacer análisis. Muchos de los datos que manejamos día a día tienen una componente geoespacial que nos permite descubrir patrones de información invisibles a primera vista.\n\nGIS son las siglas de \"Geographic Information System\" . Son los sistemas que permiten analizar y tomar decisiones en múltiples disciplinas: Agricultura, Arquitectura, Medio Ambiente, IT, Business, incluso la NASA para explorar Marte!\n\nEn 40 minutos me gustaría contaros mediante Jupyter Notebooks y con algunas otras API's qué tipos de análisis puedes empezar a hacer y explorar desde ya, con la cantidad de datos que tenemos a nuestra disposición:\n\nLa charla se distribuirá en dos partes:\n\nParte 1:\n\nConceptos básicos de GIS :\nuso de proyecciones según el análisis que se quiera hacer\nunos cuantos términos : Buffer, centroide, ...\n\nAplicaciones de GIS en nuestro día a día\n\nParte 2: Ejemplos prácticos ( Jupyter Notebooks )\n\nAnálisis de Imagen satelital\nGeo-Enriquecimiento de datos\nModelos de predicción a partir de GIS",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginner",
+        "Other",
+        "Javascript;Python"
+      ]
+    },
+    "arquitecturacabal": {
+      "title": "Una arquitectura cabal para proyectos Node.js complejos",
+      "description": "NB: this talk will be in English if there are people in the audience who won't be able to understand it in Spanish — we'll decide that on the spot.\n\n¿Por dónde empezar cuando nos enfrentamos a un proyecto Node.js no trivial, con requisitos como estos?\n\nDividido en una decena de módulos independientes (persistencia, procesos de datos, tareas programadas, API, UI…)\n…que sin embargo comparten parte de una configuración común\n…y están atravesados por varios aspectos horizontales (seguridad, auditoría…)\n…todo ello, adoptando las buenas prácticas de 2018 (automatizando: documentación, respuesta a security advisories, suites de pruebas, análisis estático del código…)\n\nEn esta charla mostraremos una propuesta personal de arquitectura concreta y organización de proyectos Node.js que es el resultado de la experiencia de meses en un proyecto con estas características. Nuestra propuesta es lo suficientemente genérica como para adaptarse a tecnologías diversas (MariaDB o MongoDB, Express o Meteor, Vue o Angular…); pero a la vez incluye estrategias, trucos y scripts simples para resolver problemas comunes: ¿cómo encapsulo la autenticación de usuario? ¿cómo incluyo los recursos estáticos del front-end? ¿cómo pruebo todos los módulos de una tacada? ¿cómo garantizo un mismo estilo de JS en todas las capas? ¿cómo valido el markup y el CSS automáticamente?\n\nEn la charla compartiremos un repositorio público con el esqueleto de un proyecto de este estilo, como ejemplo.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "Other;Web",
+        "Javascript;HTML/CSS;Bash"
+      ]
+    },
+    "tienespaguer": {
+      "title": "¡Tú tienes el pagüer! Comunica de forma persuasiva con algunos trucos ;-)",
+      "description": "Cristina Aranda, doctora en Lingüística teórica y aplicada y apasionada del teatro de improvisación, explicará nuestras principales herramientas conversacionales (verbales y no verbales), las máximas que operan en la comunicación humana y concluirá dando unos trucos para conseguir nuestras intenciones comunicativas (convencer, persuadir, seducir, ordenar...). Al fin y al cabo, en todo lo que nos rodea lingüística...",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Beginer",
+        "Soft skills",
+        "Other"
+      ]
+    },
+    "entrenanube": {
+      "title": "Entrenamiento mejorado en la nube. IoT y AI en acción",
+      "description": "En los últimos años hemos visto como el ya popular Internet de las Cosas y la Inteligencia Artificial han ido ganando presencia en nuestras vidas. Gracias a Microsoft Azure ambas tecnologías se vuelven cada vez más accesibles y fáciles para el desarrollador. Con Azure IoT podemos aprovechar el potencial de monitorizar a un cliente de un gimnasio durante su entrenamiento y con Azure Cognitive Services podemos combinar todos estos datos con las emociones que éste nos pueda otorgar después y ofrecer en base a los resultados un tratamiento personalizado.",
+      "tags": [
+        "Talk",
+        "Spanish",
+        "Intermediate",
+        "IoT;Other;Mobile;Cloud;Web",
+        ".Net;Other"
+      ]
+    },
+    "jestenzyme": {
+      "title": "Empieza a añadir test a tus proyectos de React con Jest y enzyme",
+      "description": "NOTE No odiemos al wifi y descarguemos el repo antes de la charla :) https://github.com/kevinccbsg/jest-workshop-commit-2018 y instalar las dependencias npm i\n\nPor lo general cuando aprendemos React, empezamos a crear componentes a utilizar redux, crear interfaces expectaculares y en conclusión darnos cuenta de que react es maravilloso <3.\n\nEn mi caso personal, nunca pensé que un componente debía tener test unitarios, al igual que hacemos con los endpoint de un API REST. Hasta que empecé a darme cuenta de que al igual que en mis API REST me cubrían las espaldas, tenia que buscar la forma de hacerlo con React.\n\nDe ahí el motivo de mi taller ¯\\(ツ)/¯. En mi charla hablaremos de como hacer test para aplicaciones hechas con React con Jest y Enzyme y como hacer code coverage o snapshots de la aplicación. El objetivo principal es ir paso a paso explicando como hacer testeo de las diferentes partes de una aplicación ya creada con React y redux creando test unitarios y de integración.\n\nY si nos da tiempo ver un poco de test end to end con Cypress.io :)",
+      "tags": [
+        "Workshop",
+        "Spanish",
+        "Intermediate",
+        "Web",
+        "Javascript"
+      ]
+    },
+    "ethereum": {
+      "title": "Taller de desarrollo de aplicaciones descentralizadas en la Blockchain de Ethereum",
+      "description": "Este año, como Proyecto de Fin de Máster me he pegado con el desarollo de aplicaciones descentralizadas (DApps) con contratos inteligentes (Smart Contracts) en la Blockchain de Ethereum.\n\nEn este taller pretendo hacer una pequeña aplicación descentralizada con un pequeño contrato inteligente, y enseñar todo lo que yo he aprendido a base de golpes.\n\nVeremos un poco de Solidity, un lenguaje para programar contratos inteligentes. Utilizaremos también Truffle, un framework para desarrollar y testear aplicaciones descentralizadas. Necesitaremos usar web3js para llamar desde nuestra web a la Blockchain. Usaremos MetaMask para interactuar con la aplicación. Y para minar nuestras transacciones de prueba levantaremos una instancia de Ganache.\n\nAntes de venir seguir las instrucciones del README.md de este repositorio: https://github.com/asanzdiego/commit-conf-taller-blockchain",
+      "tags": [
+        "Workshop",
+        "Spanish",
+        "Beginner",
+        "Other;Web;Blockchain",
+        "HTML/CSS/Javascript;Other"
+      ]
+    },
+    "codingmonkey": {
+      "title": "Coding like a monkey",
+      "description": "¿Qué mejor forma de empezar la Commit Conf que con una charla git, gitflow y Trunk Based Development? :)\n\nHace cosa de casi dos años, mientras aún trabajaba en idealista, tuve la suerte de que dos compañeros dieran una charla interna sobre Trunk Based Development. Recuerdo que el concepto me atrajo mucho pero me surgían muchas dudas.\n\n¿Hacer gitflow no es lo correcto? ¿Cómo hago un desarrollo grande si no puedo tener ramas o deben vivir menos de una semana? ¿Cómo hago un refactor? ¿Cómo tengo feedback de mis compañeros de equipo si no hago un pull request para que revisen? A pesar de todas esas dudas, esa charla me supuso un punto de inflexión a la hora cómo afrontar los desarrollos, intentando hacer cada vez cambios más pequeños y llevar mis ramas lo antes posible a master.\n\nComo probablemente sea muy aburrido oírme hablar durante 45 minutacos, vamos a debatir un poco sobre cómo trabajamos. ¿Hacemos gitflow porque hemos descubierto que es lo más efectivo en nuestro entorno? ¿Seguimos unas prácticas por \"costumbre\" sin saber si en realidad son las que mejor nos convienen? ¿Trabajar en master es impensable porque siempre rompemos la build? Cualquier experiencia que quieras compartir será bienvenida :)\n\nMi objetivo no es que salgas pensando voy a hacer TBD, solo que pienses ¿estoy trabajando de esta forma porque es lo que me aporta más valor o porque me han dicho que debo hacer esto?",
+      "tags": [
+        "Unconference",
+        "Spanish",
+        "Intermediate",
+        "Agile and Lean;Devops",
+        "None"
+      ]
+    },
+    "empty": {
+      "title": "",
+      "description": ""
+    },
     "coffeebreak": {
       "title": "COFFEE BREAK",
       "description": ""
@@ -1749,8 +2733,8 @@
       "title": "LUNCH BREAK",
       "description": ""
     },
-    "nomoredataavailableforthisdate": {
-      "title": "NO MORE DATA AVAILABLE",
+    "networking": {
+      "title": "NETWORKING",
       "description": ""
     }
   },
