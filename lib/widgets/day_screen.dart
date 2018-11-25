@@ -142,7 +142,7 @@ class _DayScreenState extends State<DayScreen>
                         color: Color(0xFFEEEEEE),
                         width: _myTrackWidthAnimation.value,
                         child: IconButton(
-                          icon: Icon(Icons.calendar_today),
+                          icon: Icon(Icons.person),
                           onPressed: () {
                             animationController.forward();
                             widget.bloc.myTrackIsShown = true;

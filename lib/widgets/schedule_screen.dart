@@ -63,6 +63,11 @@ class ScheduleScreenState extends State<ScheduleScreen> {
                 SizedBox(
                   height: 25.0,
                 ),
+                Text("Unofficial Commit '18 app",
+                    style: Theme.of(context).textTheme.title),
+                SizedBox(
+                  height: 25.0,
+                ),
                 Text("Built with Flutter",
                     style: TextStyle(fontWeight: FontWeight.bold)),
                 SizedBox(
