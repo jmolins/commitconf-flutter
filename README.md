@@ -1,8 +1,11 @@
-# Commit
+# Unofficial Commit 2018
 
-Unofficial Commit companion app
+Unofficial Commit 2018 companion app.
 
-## Getting Started
+The app is a proof of concept of an agenda for the Conference. It only contains the titles of the talks but can be the basis of an app to manage big conferences with a lot of tracks.
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+The user can add talks to "My Track" for easy management of his/her own agenda.
+
+![GifSample](https://github.com/jmolins/commitconf/blob/master/art/app.gif?raw=true)
+
+
